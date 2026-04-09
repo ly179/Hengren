@@ -1,0 +1,127 @@
+vroot align:top
+    glayout align:left,top hspacing:10 padb:5
+        hspacer grid:0,2
+        label text:Object grid:0,0
+        hitembox grid:0,1 galign:left id:objectCBox
+            item text:"Inner Diameter" val:0
+            item text:"Outer Diameter" val:1
+        label text:Data grid:1,0
+        hitembox  grid:1,1 galign:left id:dataCBox
+            item text:Diameter val:0
+            item text:"X-Diameter" val:1
+            item text:"Y-Diameter" val:2
+            item text:"Major-axis" val:3
+            item text:"Minor-axis" val:4
+            item text:"45°" val:5
+            item text:"135°" val:6
+            item text:Area val:7
+            item text:"X/Y" val:8
+            item text:"Y/X" val:9
+            item text:"Minor/Major" val:10
+            item text:"Major/Minor" val:11
+            item text:"3 Sigma" val:12
+        label text:"Pre Process" grid:2,0
+        hitembox grid:2,1 galign:left id:preProcessCBox
+            item text:Inverse val:0
+            item text:Shading val:1
+            item text:None val:2
+        hitembox grid:3,0 id:acdCBox
+            item text:ACD val:0
+            item text:"Min CD" val:1
+            item text:"Max CD" val:2
+            item text:"3Sigma CD" val:3
+            item text:"Mean’ " val:4
+        hlayout spacing:5 align:left grid:3,1,1,2
+            ditembox id:acdWayCBox
+            label text:Target
+            htextbox fw:50 ph:1 id:acdTargetTextField
+            label text:Limit
+            htextbox fw:50 ph:1 id:acdLimitTextField
+        hlayout grid:4,1 spacing:5 visible:false id:cursorPosContent
+            label text:"Cursor Position"
+            hitembox id:cursorPosCBox
+                item text:Preset val:0
+                item text:Adjust val:1
+                item text:"Adjust(RHD)" val:2
+        hlayout grid:4,1 spacing:5 id:patternSearchContent
+            label text:"Pattern Search"
+            hitembox id:patternSearchCBox
+                item text:Standard val:0
+                item text:Capture val:1
+    hline
+    glayout align:left,top hspacing:20 padt:5 padb:5
+        label text:Method grid:0,0
+        hitembox grid:0,1,1,3 galign:left id:methodCBox
+            item text:Linear val:0
+            item text:Threshold val:1
+            item text:Differential val:2
+        vlayout padt:5 grid:1,0
+            label text:"Design Value"
+            label text:"(1.0~200000.0)" style:"QLabel{font-size: 8pt;}"
+        hlayout align:left grid:1,1,1,3 galign:top spacing:5
+            htextbox fw:80 ph:"500.0" id:designValueTextField
+            label text:nm
+        vlayout padt:5 grid:2,0
+            label text:"Cursor Size X"
+            label text:"(25~300)" style:"QLabel{font-size: 8pt;}"
+        htextbox fw:50 ph:80 align:left grid:2,1 galign:top id:cursorSizeXTextField
+        vlayout padt:5 grid:2,2
+            label text:"Smoothing"
+            label text:"(1~29(odd))" style:"QLabel{font-size: 8pt;}"
+        htextbox fw:50 ph:7 align:left grid:2,3 galign:top  id:smoothingTextField
+        vlayout padt:5 grid:3,0
+            label text:"Cursor Size Y"
+            label text:"(25~300)" style:"QLabel{font-size: 8pt;}"
+        htextbox fw:50 ph:32 align:left grid:3,1 galign:top id:cursorSizeYTextField
+        vlayout padt:5 grid:3,2
+            label text:"Differential"
+            label text:"(3~19(odd))" style:"QLabel{font-size: 8pt;}"
+        htextbox fw:50 ph:5 align:left grid:3,3 galign:top id:diffTextField
+        vlayout padt:5 grid:4,0
+            label text:"Threshold"
+            label text:"(0~100%)" style:"QLabel{font-size: 8pt;}"
+        htextbox fw:50 ph:50 align:left grid:4,1 galign:top id:thresholdTextField
+        vlayout padt:5 grid:5,0
+            label text:"Sum Lines/Point"
+            label text:"(1~32)" style:"QLabel{font-size: 8pt;}"
+        htextbox fw:50 ph:16 align:left grid:5,1 galign:top id:sumLineOrPointTextField
+    hline
+    vlayout padt:5 id:optionEdgeContent
+        label text:"Optional Edge Recognition"
+        vlayout padl:30 spacing:3 align:left
+            glayout spacing:3 align:left
+                cbox text:"Conventional Profile Mode" id:convenProfileCheckBox grid:0,0 galign:left
+                cbox text:"High Sensitivity Detection" id:highSenCheckBox grid:1,0 galign:left
+                cbox text:"Accept Primary Edge Signal" id:acceptPriCheckBox grid:2,0 galign:left
+                cbox text:"Bottom Surface Masking" id:bottomSufCheckBox grid:3,0 galign:left
+                cbox text:"Wave Match" grid:4,0 id:waveMatchCheckBox galign:left
+                hbtnbox text:"..." grid:4,1 fw:25 fh:25 galign:left id:waveMatchBtn
+            cbox text:"Edge Detection by Pattern Recognition" id:edgeDetectByPRCheckBox sp:fix
+            glayout align:left hspacing:3
+                glayout grid:0,0 align:left padt:5 padl:27
+                    label text:"Edge Number / " grid:0,0
+                    label text:"Total" grid:0,1
+                    label text:"(1~3)" grid:1,0 style:"QLabel {font-size:8pt;}"
+                    label text:"(1~3)" grid:1,1 style:"QLabel {font-size:8pt;}"
+                htextbox ph:1 grid:0,1 fw:60 galign:top id:edgeNumberTextField
+                hlayout grid:0,2 galign:top padt:5 padl:3 padr:3
+                    label text:"/"
+                htextbox ph:1 fw:60 grid:0,3 galign:top id:edgeTotalTextField
+                vlayout padt:5 grid:1,0 padl:27
+                    label text:"Base Line Start Point"
+                    label text:"(1,2,4,8)" style:"QLabel{font-size: 8pt;}"
+                htextbox ph:2 fw:60 galign:top grid:1,1 id:baseLineStartPointTextField
+                hlayout grid:2,0 spacing:5 padl:27
+                    label text:"Base Line Area"
+                    label text:"(1~16)" style:"QLabel{font-size: 8pt;}"
+                htextbox ph:8 fw:60 grid:2,1 id:baseLineAreaTextField
+                hlayout grid:3,0 padl:27
+                    label text:"Edge Search Direct."
+                hitembox id:edgeSearchDirectCBox grid:3,1,1,3 galign:left
+                    item text:"Normal" val:0
+                    item text:"Reverse" val:1
+                hlayout spacing:5 grid:4,0 galign:left
+                    cbox text:"Image Smoothing" id:imgSmoothCheckBox
+                    label text:"(0~15)" style:"QLabel {font-size:8pt;}"
+                htextbox ph:8 fw:60 grid:4,1 id:imgSmoothTextField
+                

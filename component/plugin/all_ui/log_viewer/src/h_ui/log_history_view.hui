@@ -1,0 +1,32 @@
+vroot
+    glayout align:top,left hspacing:5 padding:5 
+        + colstretch:6, 1 colstretch:9, 1
+        label text:"Search with:" grid:0,0
+        spacer minw:15 grid:0,1
+        label text:"Level" grid:0,2
+        hitembox items: All, Debug, Info, Warn, Critical grid:0,3 sp:fix id:levelItemBox
+        spacer minw:10 grid:0,4
+        label text:"Catalog" grid:0,5
+        htextbox w:100 minw:100 grid:0,6 id:catTextField
+        spacer minw:10 grid:0,7
+        label text:"Content" grid:0,8
+        htextbox w:100 minw:100 grid:0,9 id:contentTextField
+        label text:"Date" grid:1,2
+        hlayout grid:1,3,1,4 align:center
+            hdatetime format:"yyyy/MM/dd HH:mm:ss" id:startDateTime dpop datetime:now
+            label text:-
+            hdatetime format:"yyyy/MM/dd HH:mm:ss" id:endDateTime dpop datetime:now
+        label text:File grid:1,8
+        htextbox w:100 minw:100 grid:1,9 id:fileTextField
+        hbtnbox grid:1,0 id:searchBtn text:Go!
+    hline
+    hlayout padding:5
+        htable id:contentTable
+    hline
+    hlayout padding:5
+        label text:"Page Size:"
+        hitembox id:pageSizeItemBox items:50, 100, 200
+        hbtnbox id:reloadBtn text:"Reload"
+        hspacer
+        hbtnbox text:"Prev Page" id:prevPageBtn
+        hbtnbox text:"Next Page" id:nextPageBtn

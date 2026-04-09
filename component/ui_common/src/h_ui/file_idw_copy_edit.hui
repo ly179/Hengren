@@ -1,0 +1,41 @@
+vroot
+    hlayout padding:5,0,0,10
+        label text:"Copy IDW"
+    glayout padding:10,10,10,15 colstretch:5, 1
+        label text:From grid:0,0,9,1
+        spacer minw:8 minh:5 grid:1,1
+        frame fstyle:plain, hline grid:0,2,1,8 flwidth:2 fh:2 sp:pref, fix
+        frame fstyle:plain, hline grid:5,2,1,8 flwidth:2 fh:2 sp:pref, fix
+        frame fstyle:plain, vline grid:1,2,5,1 flwidth:2 fw:2 sp:fix, pref
+        frame fstyle:plain, vline grid:1,8,5,1 flwidth:2 fw:2 sp:fix, pref
+        spacer grid:1,3 minw:5 minh:5
+        spacer grid:1,7 minw:5
+        label text:Device grid:2,4
+        htextbox grid:2,5,1,2 minw:150 disable:true id:fromDeviceTextField
+        label text:IDW grid:3,4
+        htextbox grid:3,5,1,2 minw:150 disable:true id:fromIDWTextField
+        spacer grid:4,1 minh:5
+        
+        spacer grid:6,0 minh:10
+        
+        label text:To grid:7,0,9,1
+        spacer minw:8 minh:5 grid:8,1
+        frame fstyle:plain, hline grid:7,2,1,8 flwidth:2 fh:2 sp:pref, fix
+        frame fstyle:plain, hline grid:13,2,1,8 flwidth:2 fh:2 sp:pref, fix
+        frame fstyle:plain, vline grid:8,2,6,1 flwidth:2 fw:2 sp:fix, pref
+        frame fstyle:plain, vline grid:8,8,6,1 flwidth:2 fw:2 sp:fix, pref
+        spacer grid:8,3 minw:5 minh:5
+        spacer grid:8,6 minw:5
+        hbtnbox text:Device grid:9,4 id:deviceBtn disable
+        htextbox grid:9,5,1,2 minw:150 disable:true id:toDeviceTextField
+        label text:Class grid:10,4
+        htextbox grid:10,5 minw:150 id:toClassTextField
+        hbtnbox grid:10,6 text:"..." id:toClassBtn
+        label text:IDW grid:11,4
+        htextbox grid:11,5,1,2 minw:150 id:toIDWTextField
+        spacer grid:12,1 minh:5
+    hline
+    hlayout padding:10,25
+        hbtnbox text:OK id:okBtn minw:60
+        hspacer
+        hbtnbox text:Cancel id:cancelBtn minw:60

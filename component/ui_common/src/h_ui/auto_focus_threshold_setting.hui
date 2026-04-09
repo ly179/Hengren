@@ -1,0 +1,21 @@
+vroot
+    vlayout padding:20
+        hlayout spacing:10
+            label __class:TitleText text:"Auto Focus Threshold"
+            hlayout spacing:2
+                htextbox fw:50 id:thresholdTextField
+                label text:"(0:OFF,1~999)" __class:TitleText
+        hlayout spacing: 30
+            vlayout
+                label __class:PageText text:"1.Push the Auto button, and perform Auto Focus."
+                label __class:PageText text:"2.Please push the Focusing Tool button\nwhen you confirm the threshold with the profile."
+                label __class:PageText text:"3.Threshold is set up with the OK button."
+            vlayout spacing:12 align:top
+                hlayout align:right
+                    hbtnbox text:Auto sp:fix id:autoBtn
+                hbtnbox text: "Focusing Tool" id:focusToolBtn
+    hline
+    hlayout padding: 6,12
+        hbtnbox text:OK id:okBtn
+        hspacer
+        hbtnbox text:Cancel id:cancelBtn

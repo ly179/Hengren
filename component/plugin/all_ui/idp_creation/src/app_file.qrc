@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>h_ui/idp_ap_detail_setting.hui</file>
+        <file>h_ui/idp_chip_selector.hui</file>
+        <file>h_ui/idp_data_editor.hui</file>
+        <file>h_ui/idp_measurement_arrange_setting.hui</file>
+        <file>h_ui/idp_mp_coordinate_setting.hui</file>
+        <file>h_ui/idp_mp_detail_setting.hui</file>
+        <file>h_ui/idp_mp_wafer_selector.hui</file>
+        <file>h_ui/idp_shift_coordinate_setting.hui</file>
+        <file>h_ui/template_save_box.hui</file>
+        <file>h_ui/p_d_no_editor.hui</file>
+        <file>h_ui/d_no_editor.hui</file>
+        <file>h_ui/idp_p_measure_times_editor.hui</file>
+        <file>h_ui/image_environment_editor.hui</file>
+        <file>h_ui/axis_alignment_wafer_editor.hui</file>
+        <file>h_ui/axis_align_detail_editor.hui</file>
+        <file>h_ui/idp_init_stage_different_edit.hui</file>
+        <file>h_ui/idp_opened_stage_different_edit.hui</file>
+        <file>h_ui/wizard_window.hui</file>
+        <file>h_ui/ap_wizard_content.hui</file>
+    </qresource>
+</RCC>

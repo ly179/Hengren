@@ -1,0 +1,13 @@
+hroot padding:3,3,3,10 spacing:5 align:top
+    vlayout spacing:5
+        hlayout spacing:1
+            label id:portLabel text:"PORT-A"
+            spacer minw:10
+            label text:M id:mountLabel align:center padding:1 style:"border:1px solid #000;" __class:"GreenBg" fw:20
+            label text:W id:workingLabel align:center padding:1 style:"border:1px solid #000;" __class:"WhiteBg" fw:20
+            label text:P id:pauseLabel align:center padding:1 style:"border:1px solid #000;" __class:"WhiteBg" fw:20
+            label text:F id:finishedLabel align:center padding:1 style:"border:1px solid #000;" __class:"WhiteBg" fw:20
+        label id:setupLabel text:"Set up Recipe" align:center style:"background-color:rgb(134, 114, 255); color:white; padding:5"
+    hbtnbox text:"Recipe" sp:pref id:recipeBtn
+    hbtnbox text:"Cancel" sp:pref disable:true id:cancelBtn
+    

@@ -1,0 +1,45 @@
+vroot
+    vlayout padding:5
+        hlayout
+            label text:"Alignment Point" __class:"TitleText"
+            hspacer
+            htextbox disable:true fw:50 id:titleNo
+        gflayout flwidth:1 fstyle:sunken, box padding: 5 hspacing:5
+            label text:Origin grid:0,0
+            label text:"X :" grid:0,1
+            htextbox fw:70 grid:0,2 disable:true id:originXTextField
+            hspacer grid:0,3
+            hbtnbox text:Move grid:0,4  id:originMoveBtn
+            label text:"Y :" grid:1,1
+            htextbox fw:70 grid:1,2 disable:true id:originYTextField
+            hbtnbox text:Reg grid:1,4 id:originRegBtn
+            hflayout flwidth:1 fstyle:sunken,box padding: 5 grid: 2,0,1,5
+                label text:"Design/Chip Offset"
+                hspacer
+                hbtnbox text:"Get" id:originGetBtn
+        hlayout align:center
+            vline fh:10
+        gflayout flwidth:1 fstyle:box,sunken padding:5 hspacing:5
+            label text:"Coordinate" grid:0,0
+            label text:"dx:" grid:0,1
+            htextbox fw:100 grid:0,2 id:dxTextField
+            label text:"μm" grid:0,3
+            hspacer grid:0,4 min:2
+            hbtnbox text:Reg grid:0,5 id:dRegBtn
+            label text:"dy:" grid:1,1
+            htextbox fw:100 grid:1,2 id:dyTextField
+            label text:"μm" grid:1,3
+            hbtnbox text:"Move" grid:1,5 id:dMoveBtn
+        hlayout align:center
+            vline fh:10
+        unknow id:alignmentTemplateContent
+    hline
+    hlayout padding:5
+        hbtnbox text:OK id:okBtn
+        hspacer
+        hbtnbox text:Test id:testBtn
+        hspacer
+        hbtnbox text:Cancel id:cancelBtn
+        
+                
+                

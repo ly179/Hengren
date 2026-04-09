@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>h_ui/worksheet_editor.hui</file>
+    </qresource>
+</RCC>

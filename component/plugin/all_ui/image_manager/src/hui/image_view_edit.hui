@@ -1,0 +1,27 @@
+vroot
+    hlayout padding: 5 id: canvasContent
+    hline
+    vlayout padding: 5
+        hlayout spacing: 5 align: left
+            label text: Name
+            htextbox disable id:fileNameTextField fwstretch: 1
+            spacer minw:10
+            hbtnbox text:"Send Image" id:sendImageBtn
+        glayout align: left vspacing: 5 colstretch: 2, 1
+            label text: Overlay grid: 0,0
+            hlayout grid: 0, 1, 1, 4 align: left spacing: 5
+                cbox id:eraseOvelayCBox text: "Erase Overlay" sp: fix
+                cbox id:patternAreaCBox text: "Pattern Area" sp: fix hk: true
+                hbtnbox id:overlayControlBtn text: "Overlay Control" hk: true
+            label text: "Image No." grid:1,0
+            hlayout grid:1, 1 align: left
+                htextbox fw: 50 id:imageNoTextField disable
+                label text: "/"
+                label text: "1" id: imageTotalLabel
+            
+            hlayout grid:1, 3 spacing: 7 align: left
+                hbtnbox id:leftBtn
+                hbtnbox id: rightBtn
+                hbtnbox id:infoBtn text: Information
+                spacer minw:20
+                hbtnbox text:Close id: closeBtn

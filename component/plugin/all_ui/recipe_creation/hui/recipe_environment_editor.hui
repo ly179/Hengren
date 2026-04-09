@@ -1,0 +1,123 @@
+vroot
+    vlayout padding:5
+        label text:"Wafer Alignment" __class:"TitleText"
+        hlayout align:center padding:5,20,5,20
+            vlayout
+                label text:"Execute Mode"
+                hitembox id:waferExeItemBox
+                    item text:Auto val:0
+                    item text:Manual val:1
+                    item text:"Manual Assist" val:2
+            hspacer
+            vlayout
+                label text:"Manual Assist"
+                hitembox id:waferExeManualAssistItemBox
+                    item text:No val:0
+                    item text:Error val:1
+                    item text:Always val:2
+            hspacer
+            vlayout
+                label text:"Image Save"
+                hitembox id:waferExeImageSaveItemBox
+                    item text:No val:0
+                    item text:Error val:1
+                    item text:Always val:2
+    hline
+    vlayout padding:5
+        label text:"Measurement Addressing" __class:"TitleText"
+        hlayout align:center padding:5,20,5,20
+            vlayout
+                label text:"Execute Mode"
+                hitembox id:measureAddressItemBox
+                    item text:Auto val:0
+                    item text:Manual val:1
+                    item text:"Manual Assist" val:2
+            hspacer
+            vlayout
+                label text:"Manual Assist"
+                hitembox id:measureAddressManualAssistItemBox
+                    item text:No val:0
+                    item text:Error val:1
+                    item text:Always val:2
+            hspacer
+            vlayout
+                label text:"Image Save"
+                hitembox id:measureAddressImageSaveItemBox
+                    item text:No val:0
+                    item text:Error val:1
+                    item text:Always val:2
+    hline
+    vlayout padding:5
+        label text:"Measurement Execution" __class:"TitleText"
+        hlayout align:center padding:5,20,5,20
+            vlayout
+                label text:"Execute Mode"
+                hitembox id:measureExeItemBox
+                    item text:Auto val:0
+                    item text:Manual val:1
+                    item text:"Manual Assist" val:2
+            hspacer
+            vlayout
+                label text:"Manual Assist"
+                hitembox id:measureExeManualAssistItemBox
+                    item text:No val:0
+                    item text:Error val:1
+                    item text:Always val:2
+            hspacer
+            vlayout
+                label text:"Image Save"
+                hitembox id:measureExeImageSaveItemBox
+                    item text:No val:0
+                    item text:Error val:1
+                    item text:Always val:2
+    hline
+    vlayout padding:5
+        label text:"Measurement Result" __class:"TitleText"
+        glayout padding:5,20,5,20 hspacing:60 align:left
+            cbox text:"Disk Save" id:diskSaveCBox grid:0,0
+            cbox text:"Send To Host" id:sendToHostCBox grid:0,1
+            cbox text:"Print Out" id:printOutCBox grid:1,0
+            cbox text:"Network Transfer" id:networkTransferCBox grid:1,1
+        glayout padding:0,20,5,20 align:left hspacing:20
+            label text:Confirm grid:0,0
+            hlayout spacing:15 grid:0,1
+                hitembox id:confirmItemBox
+                    item text:No val:0
+                    item text:ON val:1
+                    item text:"Automatic" val:2
+                hlayout spacing:5 disable:true id:succRateContent
+                    label text:"Success Rate"
+                    htextbox fw:40 id:confirmSuccRateTextField ph:100
+                    label text:"%"
+            label text:"Method" grid:1,0
+            hitembox id:methodItemBox grid:1,1 sp:fix
+                item text:"Each Wafer" val:0
+                item text:"Each Cassette" val:1
+            label text:"Limit Check" grid:2,0
+            hitembox id:limitCheckItemBox grid:2,1 sp:fix
+                item text:"OFF" val:0
+                item text:"ON(1st Limit)" val:1
+                item text:"ON(2nd Limit)" val:2
+    hline
+    vlayout padding:5
+        label text:"Addition Setting" __class:"TitleText"
+        vlayout padding:5,20,5,20
+            cbox text:"Edit IDP after Wafer Alignment" id:editIdpCBox sp:fix
+            cbox text:"Preset Brightness and Contrast" id:presetBcCBox sp:fix
+            cbox text:"Retry SEM Alignment with AFCC" id:retryAlignCBox sp:fix
+            cbox text:"Retry Addressing with AFCC" id:retryAddressCBox sp:fix
+            cbox text:"Retry Pattern Recognition with AFCC(High-Mag)" id:retryPatternRegCBox sp:fix
+            cbox text:"Re-Measure Error Site" id:reMeasureErrCBox sp:fix
+            cbox text:"Periodic Wafer Alignment" id:periodicWaferAlignCBox sp:fix
+            hlayout align:left
+                label text:"Ionizer Irradiation"
+                spacer minw:15
+                htextbox id:ionizerTextField fw:60
+                label text:"s (0-900)"
+    hline
+    hlayout padding:5,20
+        hbtnbox id:okBtn text:OK
+        hspacer
+        hbtnbox id:saveDefaultBtn text:"Save Default"
+        hspacer
+        hbtnbox id:cancelBtn text:Cancel

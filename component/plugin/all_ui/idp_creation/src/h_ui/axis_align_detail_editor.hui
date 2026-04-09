@@ -1,0 +1,61 @@
+vroot padding:5 align:top
+    label text:"Axis Alignment" id:titleLabel
+    gflayout flwidth:1 fstyle:sunken,box padding:5 hspacing:5
+        spacer grid:1,0 minw:25
+        spacer grid:2,3 minw:5
+        hlayout grid:0,0,1,8
+            cbox text:Move id:moveCheckBox sp:fix
+            hlayout align:right
+                hbtnbox text:"Move" id:moveBtn fw:60
+        hlayout grid:1,1,1,7
+            label text:Coordinate
+            hlayout align:right
+                hbtnbox text:Reg id:regBtn fw:60
+        label text:"X:" grid:2,1
+        htextbox fw:85 grid:2,2 id:coordinateXTextField
+        label text:"±" grid:2,4
+        htextbox fw:85 grid:2,5 id:coordinateXDeviationTextField
+        label text:"μm" grid:2,6
+        label text:"Y:" grid:3,1
+        htextbox fw:85 grid:3,2 id:coordinateYTextField
+        label text:"±" grid:3,4
+        htextbox fw:85 grid:3,5 id:coordinateYDeviationTextField
+        label text:"μm" grid:3,6
+        cbox text:"Z Sensor" id:zSensorCheckBox grid:4,0,1,7 sp:fix
+        hbtnbox text:"..." id:zSensorMoreBtn grid:4,7
+    hlayout align:center
+        vline fh:5 sp:fix
+    hflayout flwidth:1 fstyle:sunken,box padding:3,5
+        cbox id:autoFocusCheckBox text:"Auto Focus" sp:fix
+        hlayout align:right
+            hbtnbox text:"..." id:autoFocusMoreBtn
+    hlayout align:center
+        vline fh:5 sp:fix
+    vflayout flwidth:1 fstyle:sunken,box padding:5
+        hlayout
+            cbox text:"Pattern Recognition" id:patternCheckBox sp:fix
+            hlayout align:right
+                hbtnbox text:"..." id:patternMoreBtn
+        hlayout padl:25
+            label text:"Model"
+        hlayout padl:35 align:left spacing:5
+            ncanvas fw:120 fh:120 id:modelCanvas
+            vlayout align:top
+                hbtnbox text:Action id:actionBtn sp:fix
+                    act text:"Reg. Image" id:regImageAct
+                    act text:"Information" id:regInfoAct
+                    act text:"Clear" id:regClearAct
+    hlayout align:center
+        vline fh:5 sp:fix
+    gflayout flwidth:1 fstyle:sunken,box padding:5 vspacing:5 hspacing:3 align:left
+        cbox text:"Axis Alignment" id:axisAlignCheckBox grid:0,0,1,6 sp:fix
+        spacer minw:23 grid:1,0
+        spacer minw:100 grid:1,2
+        label text:"Wait" grid:1,1
+        htextbox fw:85 grid:1,3 id:waitSecond
+        label text:s grid:1,4
+        label text:"Mag" grid:2,1
+        htextbox fw:85 grid:2,3 id:magTextField
+        hbtnbox text:Read grid:2,4 id:readBtn
+        label text:"Frame" grid:3,1 id:axisItemLabel
+        ditembox grid:3,3,1,2 sp:fix id:axisItemBox

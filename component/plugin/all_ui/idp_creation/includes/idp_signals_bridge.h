@@ -1,0 +1,14 @@
+#ifndef IDP_SIGNALS_BRIDGE_H
+#define IDP_SIGNALS_BRIDGE_H
+
+#ifdef __IDP__TARGET
+#include "signal_hub_plugin_concat.h"
+#include "ui_idp_creation_global.h"
+typedef void(*IDP_U_Callback)(void);
+SIGNAL_EXPORT UI_IDP_CREATION_EXPORT SIGNAL_CHECK(__IDP__TARGET);
+SIGNAL_EXPORT UI_IDP_CREATION_EXPORT SIGNAL_REG(__IDP__TARGET);
+SIGNAL_EXPORT UI_IDP_CREATION_EXPORT SIGNAL_UNREG(__IDP__TARGET);
+#endif
+
+
+#endif // IDP_SIGNALS_BRIDGE_H

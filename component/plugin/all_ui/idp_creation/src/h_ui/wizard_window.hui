@@ -1,0 +1,15 @@
+vroot
+    hlayout padding: 5 spacing: 5
+        vlayout fwstretch: 0 spacing: 10
+            label text: Step fwstretch: 0
+            htable id: stepTable fwstretch: 1 hn: need vn: need fw: 150 sp: pref
+        vlayout id: contentContext fwstretch: 1 align: top
+            spacer minh: 10
+            label id: noteLabel __class: PageText fwstretch: 0
+                + wordwrap: true
+    hline
+    hlayout padding: 5 align: vcenter, right
+        hbtnbox id: cancelBtn text: Cancel minw: 70
+        hbtnbox id: backBtn text: "<<Back" minw: 70
+        hbtnbox id: nextBtn text: "Next>>" minw: 70
+        hbtnbox id: skipBtn text: Skip minw: 70

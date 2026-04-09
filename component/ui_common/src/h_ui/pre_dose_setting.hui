@@ -1,0 +1,39 @@
+vroot
+    vlayout padding:5 align:left
+        cbox text:"Pre Dose" sp:fix id:preCbox
+        hlayout id:paramContent disable:true
+            vlayout padding: 0,10
+                glayout hspacing: 8
+                    label text:Mag grid:0,0
+                    label text:Wait grid:1,0
+                    hlayout grid: 0,1
+                        htextbox fw:70 id:magTextField
+                        hbtnbox id:readBtn text:Read
+                    hlayout grid:1,1
+                        htextbox fw:45 id:waitSecondsTextField
+                        label text:s
+                    hspacer grid:0,2
+                glayout hspacing: 10
+                    cbox text:"Specify Vacc" grid:0,0 id:customVaccCBox
+                    label text:Mode grid:1,0 galign:right
+                    hlayout grid:0,1
+                        htextbox text:800 disable:true fw:55 id:vaccTextField disable:true
+                        label text:V
+                    ditembox items:Mild grid:1,1 galign:left id:vaccModeBtn disable:true
+                    hspacer grid:0,2
+                cbox text:"Shift to the low magnification without changing optics mode" id:unChangeModeCBox
+                hlayout spacing: 20 align:left
+                    cbox text:"High Current Mode" id:highModeCBox
+                    hlayout spacing: 3 align:left
+                        label text:"Memory No."
+                        hlayout
+                            htextbox disable:true text:100 fw:50 id:memTextField
+                            hbtnbox text:"..." id:memBtn
+    hline
+    hlayout padding:5 spacing:5
+        hlayout align:left
+            hbtnbox text:OK id:okBtn
+            hbtnbox text:"<<Back" id:backBtn
+            hbtnbox text:"Next>>" id:nextBtn
+        hlayout align:right
+            hbtnbox text:Cancel id:cancelBtn

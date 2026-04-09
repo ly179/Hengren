@@ -1,0 +1,15 @@
+vroot
+    vlayout padding:20
+        label text:MP
+        hlayout spacing:20
+            htable id:pNoTable hn:need minw:210 minh:210
+            hlayout align:top spacing:10
+                label text:"Measurement Times(1~40)"
+                htextbox fw:50 id:timesTextField
+                hbtnbox text:Apply id:applyBtn
+    hline
+    hlayout padding:5,20
+       hbtnbox text:OK id:okBtn
+       hspacer
+       hbtnbox text:Cancel id:cancelBtn
+        

@@ -1,0 +1,9 @@
+#ifndef UI_IDW_CREATION_GLOBAL_H
+#define UI_IDW_CREATION_GLOBAL_H
+#include <QtGlobal>
+#ifdef UI_IDW_CREATION_GLOBAL_LIB
+#define UI_IDW_EXPORT Q_DECL_EXPORT
+#else
+#define UI_IDW_EXPORT Q_DECL_IMPORT
+#endif
+#endif // UI_IDW_CREATION_GLOBAL_H

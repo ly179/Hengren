@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>h_ui/amp_editor.hui</file>
+        <file>h_ui/amp_gap_editor.hui</file>
+        <file>h_ui/amp_width_editor.hui</file>
+        <file>h_ui/detection_common_setting.hui</file>
+        <file>h_ui/amp_diameter_hole_editor.hui</file>
+        <file>h_ui/amp_ellipse_editor.hui</file>
+        <file>h_ui/amp_corner_editor.hui</file>
+        <file>h_ui/amp_mppc_editor.hui</file>
+        <file>h_ui/amp_open_close_hole_editor.hui</file>
+        <file>h_ui/amp_edge_roughness_editor.hui</file>
+        <file>h_ui/amp_width_roughness_editor.hui</file>
+        <file>h_ui/amp_lwr_analysis_editor.hui</file>
+        <file>h_ui/amp_dense_setting_editor.hui</file>
+    </qresource>
+</RCC>

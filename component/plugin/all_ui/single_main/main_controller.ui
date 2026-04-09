@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainController</class>
+ <widget class="QWidget" name="MainController">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1071</width>
+    <height>116</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#btn_monitor, #btn_option, #btn_hardCopy, #btn_utility, #btn_maintenance {
+	background-color: rgb(152, 244, 255);
+	border-top: 2px solid rgb(135, 191, 202);
+	border-left: 2px solid rgb(135, 191, 202);
+	border-right: 2px solid rgb(93, 130, 137);
+	border-bottom: 2px solid rgb(93, 130, 137);
+}
+#btn_monitor:pressed, #btn_option:pressed, #btn_hardCopy:pressed, #btn_utility:pressed, #btn_maintenance:pressed {
+	border-bottom: 2px solid rgb(135, 191, 202);
+	border-right: 2px solid rgb(135, 191, 202);
+	border-left: 2px solid rgb(93, 130, 137);
+	border-top: 2px solid rgb(93, 130, 137);
+}</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="CDE90Frame" name="frame">
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="lineWidth">
+      <number>2</number>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>5</number>
+      </property>
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <item row="0" column="3">
+       <widget class="CDE90ButtonBox" name="btn_worksheet" native="true"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="CDE90ButtonBox" name="btn_loaderController" native="true"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="CDE90ButtonBox" name="btn_imageOperation" native="true"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="CDE90ButtonBox" name="btn_stageController" native="true"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="CDE90ButtonBox" name="btn_recipeController" native="true"/>
+      </item>
+      <item row="2" column="2">
+       <widget class="CDE90ButtonBox" name="btn_changeUser" native="true"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="CDE90ButtonBox" name="btn_manualController" native="true"/>
+      </item>
+      <item row="2" column="3">
+       <widget class="CDE90ButtonBox" name="btn_hardCopy" native="true"/>
+      </item>
+      <item row="0" column="4">
+       <widget class="CDE90ButtonBox" name="btn_monitor" native="true"/>
+      </item>
+      <item row="1" column="4">
+       <widget class="CDE90ButtonBox" name="btn_option" native="true"/>
+      </item>
+      <item row="2" column="4">
+       <widget class="CDE90ButtonBox" name="btn_logout" native="true"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="CDE90Frame" name="frame_2">
+     <property name="styleSheet">
+      <string notr="true">QFrame {background-color: rgb(255, 239, 219);} #btn_empty,#label_time,#label_emi {border-top: 2px solid rgb(163, 146, 126); border-left: 2px solid rgb(163, 146, 126); border-bottom: 2px solid rgb(201, 189, 173); border-right: 2px solid rgb(201, 189, 173);}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="lineWidth">
+      <number>2</number>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="styleSheet">
+         <string notr="true">#btn_empty {background-color: transparent;}</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="CDE90ButtonBox" name="btn_fileManager" native="true"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QPushButton" name="btn_empty">
+           <property name="text">
+            <string>EMPTY</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="CDE90ButtonBox" name="btn_templateManager" native="true"/>
+         </item>
+         <item row="0" column="2">
+          <widget class="CDE90ButtonBox" name="btn_utility" native="true"/>
+         </item>
+         <item row="1" column="1">
+          <widget class="CDE90ButtonBox" name="btn_amp" native="true"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="CDE90ButtonBox" name="btn_msr" native="true"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="CDE90ButtonBox" name="btn_image" native="true"/>
+         </item>
+         <item row="1" column="2">
+          <widget class="CDE90ButtonBox" name="btn_maintenance" native="true"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_4" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_emi">
+           <property name="minimumSize">
+            <size>
+             <width>120</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>User Name</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_time">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel {padding: 0 10;}</string>
+           </property>
+           <property name="text">
+            <string>2007/09/19
+16:27</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::AutoText</enum>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDE90ButtonBox</class>
+   <extends>QWidget</extends>
+   <header location="global">cde90_button.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CDE90Frame</class>
+   <extends>QFrame</extends>
+   <header location="global">cde90_frame.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

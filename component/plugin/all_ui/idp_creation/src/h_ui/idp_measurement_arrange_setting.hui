@@ -1,0 +1,58 @@
+vroot
+    hlayout padding:5 spacing:10
+        vlayout spacing:5 align:top
+            hitembox id:typeItemBox sp:fix
+                item text:Matrix val:0
+                item text:Diagonal val:1
+            glayout id:matrixContent vspacing:3
+                label id:upLabel grid:0,0,1,5 galign:center
+                htextbox id:upTextField grid:1,0,1,5 galign:center fw:60 text:0
+                label id:leftLabel grid:2,0
+                htextbox id:leftTextField grid:2,1 fw:60 text:0
+                label id:centerLabel grid:2,2
+                htextbox id:rightTextField grid:2,3 fw:60 text:0
+                label id:rightLabel grid:2,4
+                htextbox id:downTextField grid:3,0,1,5 galign:center fw:60 text:0
+                label id:downLabel grid:4,0,1,5 galign:center
+            glayout vspacing:3 hspacing:10 padding:5 id:diagonalContent visible:false
+                label id:leftUpLabel grid:0,0
+                label id:rightUpLabel grid:0,1 galign:right
+                hlayout grid:1,0 padl:5
+                    htextbox id:leftUpTextField fw:60 text:0
+                hlayout grid:1,1 padr:5
+                    htextbox id:rightUpTextField fw:60 text:0
+                label id:xCenterLabel grid:2,0,1,2 galign:center
+                hlayout grid:3,0 padl:5
+                    htextbox id:leftDownTextField fw:60 text:0
+                hlayout grid:3,1 padr:5
+                    htextbox id:rightDownTextField fw:60 text:0
+                label id:leftDownLabel grid:4,0
+                label id:rightDownLabel grid:4,1 galign:right
+        hspacer
+        vlayout align:top spacing:15
+            glayout vspacing:8 hspacing:6
+                hlayout padr:15 grid:0,0
+                    label text:Pitch
+                label text:X grid:0,1
+                htextbox fw:80 grid:0,2 id:pitchXTextField
+                label text:"μm" grid:0,3
+                label text:Y grid:1,1
+                htextbox fw:80 grid:1,2 id:pitchYTextField
+                label text:"μm" grid:1,3
+            hlayout id:matrixInfoContent hk:true
+                label text:Matrix
+                label text:X
+                htextbox fw:60 disable:true id:mxTextField
+                label text:x
+                label text:Y
+                htextbox fw:60 disable:true id:myTextField
+            hlayout align:right
+                hbtnbox text:Apply id:applyBtn
+    hline
+    vlayout id:orderContent padding:5
+        label text:"Measurement Order"
+    hline
+    hlayout padding:3,8
+        hbtnbox text:OK id:okBtn
+        hspacer
+        hbtnbox text:Cancel id:cancelBtn

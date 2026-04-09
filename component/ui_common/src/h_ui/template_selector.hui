@@ -1,0 +1,22 @@
+vroot
+    glayout padding: 10 spacing:10
+        hlayout grid:0,0
+            hlayout align:left
+                htextbox text:MP disable:true fw:50 id:titleTextField
+            hlayout align:right
+                hbtnbox text:Action id:actionBtn
+        hlist grid:1,0 id:listView
+        hlayout grid:2,0
+            label text:"Template Item:"
+            htextbox disable:true text:"57/5000" fw:100
+        vlayout grid:1,1 padb:20 spacing:5
+            ncanvas sp:exp id:canvas
+            htextbox disable:true text:test id:selectedTextField
+            label text:Comment
+            htextbox disable:true id:commonTextField
+    hline
+    hlayout padding:5
+        hbtnbox text:OK id:okBtn
+        hspacer
+        hbtnbox text:Cancel id:cancelBtn
+            

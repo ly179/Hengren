@@ -1,0 +1,50 @@
+vroot
+    hlayout align:left
+        cbox text:"Auto Focus" id:autoFocusCbox
+    glayout padding:0,4,2,15
+        hspacer grid:0,3 min:0
+        hlayout  grid:0,0 padding:0,5,0,0
+            label text:"Relative Position"
+        label text:"X :"  grid:0,1 galign:right
+        hlayout grid:0,2
+            htextbox text:"0.0" ph:"0.0" fw:70 id:dxTextField
+            label text:"μm"
+        hbtnbox text:Reg grid:0,4 id:regBtn
+
+        label text:"Y :" grid:1,1 galign:right
+        hlayout grid:1,2
+            htextbox text:"0.0" ph:"0.0" fw:70 id:dyTextField
+            label text:"μm"
+
+        label text:Wait grid:2,0 align:left
+        hlayout grid:2,2
+            htextbox text:"0.0" ph:"0.0" fw:50 id:waitTextField
+            label text:s
+
+        label text:Mag grid:3,0
+        hlayout grid:3,2
+            htextbox fw:75 id:magTextField
+            hbtnbox text:Read id:readBtn
+        label text: "Pixel XY" grid: 4, 0
+        ditembox id: pixelItemBox grid: 4, 2 sp: fix
+        label text:Frame grid:5, 0
+        ditembox id:frameItemBox grid:5,2 sp:fix
+        label text:"Scan Rate" grid:6, 0
+        ditembox id:scanRateItemBox grid:6,2 sp:fix
+        label text:Method grid:7,0
+        ditembox grid:7,2 galign:left id:methodComboBox
+
+        hbtnbox text:"Offset..." grid:8,0 galign:left id:offsetBtn
+        hlayout grid:8,2
+            htextbox text:0 ph:0 fw:70 id:offsetTextField
+            label text:"(LSB)"
+        hbtnbox text:"Threshold..." grid:9,0 galign:left id:thresholdBtn
+        hlayout grid:9,2,1,3
+            htextbox text:0 ph:0 fw:60 id:thresholdTextField
+            label text:"(0:OFF,1~999)"
+        label text:"Charging Voltage" grid:10,0 id:chargingVoltageLabel
+        hlayout grid:10,2,1,3 spacing:3 align:left id:chargingVoltageContent
+            htextbox text:"-150" fw:70 disable:true id:lowChargeVoltTextField
+            label text:"~"
+            htextbox text:"150"  fw:70 disable: true id:highChargeVoltTextField
+            label text:V

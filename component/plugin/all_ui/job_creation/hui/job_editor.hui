@@ -1,0 +1,9 @@
+hroot align:top
+    vlayout id:jobItemContent
+    vline
+    vlayout align:center spacing:15
+        hbtnbox text:Stop id:stopBtn disable:true
+        hbtnbox text:Pause id:pauseBtn disable:true
+        hbtnbox text:Interrupt id:interruptBtn disable:true
+        hbtnbox text:Queue id:queueBtn
+        hbtnbox text:Close id:closeBtn

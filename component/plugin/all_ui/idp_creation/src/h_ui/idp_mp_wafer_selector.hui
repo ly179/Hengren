@@ -1,0 +1,45 @@
+vroot
+    vlayout padding:5 spacing:3
+        idw_canvas id:idwCanvasContent minw:500 minh:500
+        hlayout
+            hlayout
+                label text:"Chip X,Y("
+                htextbox fw:80 align:hcenter id:chipNoTextField
+                label text:")"
+                hbtnbox text:All id:allBtn
+            hspacer min:10
+            hlayout
+                label text:Count
+                htextbox disable:true id:countTextField fw:80
+            
+        hlayout spacing:3
+            vflayout flwidth:1 fstyle:plain,box padding:8 spacing:10 hk id: sortContent
+                hlayout align:left
+                    label text:"Sort Order"
+                hlayout padding:0,0,0,15
+                    hlayout align:left
+                        hitembox  id:sortOrderBox  items:"X(Column)","Y(Row)"
+                    hlayout align:right
+                        hbtnbox text:Sort id:sortBtn
+                hline
+                hlayout padding:0,0,0,15
+                    label text:"Sequence No." sp:fix,pref
+                    htextbox text:1 minw:70 id:seqNoTextField
+                    hbtnbox id:seqDownBtn sp:fix
+                    hbtnbox  id:seqUpBtn sp:fix
+            vlayout
+                gflayout flwidth:1 fstyle:plain,box padding:8
+                    label text:Shift grid:0,0,1,3 galign:left
+                    hbtnbox grid:1,0,2,1 galign:right,vcenter id:leftBtn
+                    hbtnbox grid:1,1 galign:hcenter,bottom id:upBtn
+                    hbtnbox grid:2,1 galign:hcenter,top id:downBtn
+                    hbtnbox grid:1,2,2,1 galign:left,vcenter id:rightBtn
+                hlayout padding:0,8
+                    label text:Magnify
+                    hitembox id:magBox items:x1,x2,x3,x4
+    hline
+    hlayout padding:3,5
+        hbtnbox text:OK id:okBtn
+        hspacer
+        hbtnbox text:Cancel id:cancelBtn
+    

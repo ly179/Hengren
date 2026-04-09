@@ -1,0 +1,12 @@
+#ifndef IDW_SIGNALS_BRIDGE_H
+#define IDW_SIGNALS_BRIDGE_H
+
+#ifdef __IDW__TARGET
+#include "signal_hub_plugin_concat.h"
+#include "ui_idw_creation_global.h"
+SIGNAL_EXPORT UI_IDW_EXPORT SIGNAL_CHECK(__IDW__TARGET);
+SIGNAL_EXPORT UI_IDW_EXPORT SIGNAL_REG(__IDW__TARGET);
+SIGNAL_EXPORT UI_IDW_EXPORT SIGNAL_UNREG(__IDW__TARGET);
+#endif
+
+#endif // IDW_SIGNALS_BRIDGE_H

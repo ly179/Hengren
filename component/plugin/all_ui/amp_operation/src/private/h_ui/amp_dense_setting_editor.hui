@@ -1,0 +1,25 @@
+groot hspacing:20 vspacing:3 align:left padl:10 hk:true id:denseObjectSettingContent align:top
+    label id:measTypeLabel text:"Meas. Line" grid:0,0
+    hitembox grid:0,1 id:dMeasLineCBox sp:min
+        item text:Both val:0
+        item text:Odd val:1
+        item text:Even val:2
+    label  id:startNumLabel text:"Start Line" grid:0,2
+    htextbox fw:50 grid:0,3 id:dStartLineTextField ph:1
+    label text:"Meas. Direction" grid:1,0
+    hitembox grid:1,1 id:dMeasDirectionCBox sp:min
+        item text:Normal val:0
+        item text:Reverse val:1
+    label text:"Meas. Num" grid:1,2
+    htextbox fw:50 grid:1,3 id:dMeasNumTextField ph:1
+    hlayout grid:2,0 align:left
+        vlayout padt:5
+            label text:"Cursor Size X"
+            label text:"(20~4016)" style:"QLabel {font-size:8pt;}" align:center
+    htextbox fw:60 grid:2,1 id:dCursorSizeXTextField ph:256
+    hlayout grid:2,2 align:left
+        vlayout padt:5
+            label text:"Cursor Size Y"
+            label text:"(1~3522)" style:"QLabel {font-size:8pt;}" align:center
+    htextbox fw:60 grid:2,3 id:dCursorSizeYTextField ph:256
+    cbox text:"Edge Detection for Dense Line" grid:3,0,1,4 galign:left id:dEdgeDetectCheckBox

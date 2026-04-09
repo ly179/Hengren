@@ -1,0 +1,56 @@
+vroot align:top spacing:5
+    glayout hspacing:40 align:left vspacing:5
+        label text: Object grid:0,0
+        hitembox grid:0,1 galign:left id:objectCBox
+            item text:Line val:0
+        label text:Data grid:1,0
+        hitembox grid:1,1 galign:left id:dataCBox
+            item text:CD val:0
+            item text:LWR val:1
+            item text:"3 Sigma (intra)" val:2
+            item text:"3 Sigma (inter)" val:3
+    glayout align:left hspacing:5 vspacing:10
+        label text:"Measurement Point" grid:0,0
+        htextbox ph:200 text:200 disable:true fw:40 grid:0,1 id:measurePointTextField
+        label text:"Sum Lines / Point" grid:1,0
+        htextbox ph:2 text:2 disable:true fw:40 grid:1,1 id:sumLineOrPointTextField
+        vlayout padt:5 grid:2,0
+            label text:"Transistor Width"
+            label text:"(50~20000)" style:"QLabel{font-size: 8pt;}"
+        hlayout align:left grid:2,1 galign:top spacing:10
+            htextbox ph:200 fw:70 id:transisorTextField
+            label text:nm
+    hline
+    glayout hspacing:10 align:left
+        spacer grid:0,4 minw:10
+        spacer grid:2,2 minw:10
+        spacer grid:1,0 minh:3
+        label text:Method grid:0,0 sp:pref galign:left
+        hitembox grid:0,1,1,4 sp:pref galign:left id:methodCBox
+            item text:Linear val:0
+            item text:Threshold val:1
+            item text:Differential val:2
+        vlayout grid:2,0 padt:5
+            label text:"Design Value"
+            label text:"(0.0~200000.0)" style:"QLabel {font-size:8pt;}"
+        hlayout grid:2,1,1,4 padb:10 spacing:5
+            htextbox ph:"100.0" fw:80 id:designValueTextField
+            label text:nm 
+        vlayout grid:3,0 padt:5
+            label text:"Search Area"
+            label text:"(10~300)" style:"QLabel {font-size:8pt;}"
+        htextbox ph:50 fw:60 grid:3,1 galign:top id:searchAreaTextField
+        vlayout grid:3,3 padt:5
+            label text:"Smoothing"
+            label text:"(1~29(odd))" style:"QLabel {font-size:8pt;}"
+        htextbox ph:7 fw:60 grid:3,5 galign:top id:smoothintTextField
+        vlayout grid:4,0 padt:5
+            label text:"Inspect Area"
+            label text:"(10~400)" style:"QLabel {font-size:8pt;}"
+        htextbox ph:400 text:400 fw:60 grid:4,1 galign:top disable:true id:inspectAreaTextField
+        vlayout grid:4,3 padt:5
+            label text:"Differential"
+            label text:"(3~19(odd))" style:"QLabel {font-size:8pt;}"
+        htextbox ph:5 fw:60 grid:4,5 galign:top id:diffTextField
+    hline
+    ampds id:commonSettingController

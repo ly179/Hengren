@@ -1,0 +1,9 @@
+vroot align: top
+    hlayout padding: 5 spacing: 5
+        label text:Image fwstretch: 0
+        htextbox disable fwstretch: 1 id:imageNameTextField
+    hlayout padding: 5
+        textarea id: imageInfoTextArea readonly swaprow:no
+    hline
+    hlayout padding: 5
+        hbtnbox id: closeBtn text:Close sp: fix minw: 60

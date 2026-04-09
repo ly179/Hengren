@@ -1,0 +1,55 @@
+vroot align: top
+    hlayout
+        menubar style: "QMenuBar {border-right: 2px solid transparent;}" fwstretch: 1
+            menu text: File
+                act id: reloadAct text: Reload
+                act id: displayAct text:Display
+                act id: copyAct text:Copy
+                act id: moveAct text:Move
+                act id: deleteAct text:Delete
+                act id: renameAct text:Rename
+                act id:displayAll text: "Display All"
+                act id: compressAct text: "Compress"
+                act id: copyToPublicAct text: "Copy to public"
+                act id: uploadAct text: "Upload"
+                act id: printAct text: "Print..."
+                act id: exitAct text: Exit
+            menu text: Device
+            menu text: Option
+            menu text: show
+        menubar sp: pref style: "border-left: 2px solid transparent;" fwstretch: 0
+            menu text: Help
+    vlayout
+        hlayout align: left padding: 5, 5, 0, 5
+            hbtnbox id: deviceBtn text:Device
+            htextbox id: deviceTextField fw: 150 text: "H/D" disable
+            hlayout align: right padr: 20 fwstretch: 1
+                label id: freeLabel text: 1111MB
+        glayout minh: 300 hspacing: 5 padb: 10
+            spacer minw: 5 grid: 0, 0
+            spacer minw: 5 grid: 0, 4
+            label text: Class grid: 0, 1
+            hlist id: classList minw: 200 grid: 1, 1
+            label text: MSR grid: 0, 2
+            hlist id: msrList minw: 200 grid: 1, 2
+            hlayout grid: 0, 3
+                label text: Image
+                loadpane id: processPane radius: 10 pradius: 1 fw: 25 fh: 25 hk: true visible: false
+            hlist id: imageList minw: 200 grid: 1, 3
+            hlayout grid: 2, 1
+                label text: "Class:"
+                htextbox id: classCountTextField fw: 100 disable
+            hlayout grid: 2, 2
+                label text: "MSR:"
+                htextbox id: msrCountTextField fw: 100 disable
+            hlayout grid: 2, 3
+                label text: "Image:"
+                htextbox id: imageCountTextField fw: 100 disable
+            hline grid: 3,0,1,5
+            spacer minh: 3 grid: 4,0
+            label text: "Select Class" grid: 5,1
+            htextbox disable id:selectedClassTextField grid: 6,1
+            label text: "Select MSR" grid: 5,2
+            htextbox disable id:selectedMsrTextField grid: 6,2
+            label text: "Select Image" grid: 5,3
+            htextbox disable id:selectedImageTextField grid: 6,3

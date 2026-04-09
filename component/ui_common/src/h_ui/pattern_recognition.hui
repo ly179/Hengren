@@ -1,0 +1,33 @@
+vroot
+    glayout padding:5 hspacing:5 vspacing:5
+        label text:Kind grid:0,0
+        label text:Processor grid:1,0
+        label text:Algorithm grid:2,0
+        label text:"Acceptance\n(Low Limit)" grid:3,0
+        ditembox grid:0,1 id: kindBtn sp:fix
+        ditembox grid:1,1 id:processorBtn disable:true sp:fix
+        ditembox grid:2,1 id:algorithmBtn sp:fix
+        htextbox fw:70 grid:3,1 id:lowLimitTextField
+        label text:"Line & Space Detection" grid:4,0 id:lineSpaceDetectionLabel visible:false
+        ditembox grid:4,1 items:OFF id:lineSpaceDetectionItemBox visible:false sp:fix
+        label text:"Macro Alignment" grid:5,0 disable:true  visible:false id:macroAlignLabel
+        hitembox grid:5,1 items:OFF,ON disable:true visible:false id:macroAlignItemBox sp:fix
+        hbtnbox text:"Save Default" grid:0,2 id:saveDefaultBtn
+        
+    hline id:line1
+    vlayout padding:5 id:execBeforeRegContent
+        label text:"Execute before Registration"
+        vlayout padl:12
+            cbox text:ABC id:abcCbox sp:fix
+            cbox text:"Auto Focus" id:autoFocusCBox sp:fix
+            
+    vlayout padding:5 id:loadRegisteredContent visible:false
+        cbox id:ampCursorCbox text:"Load registered AMP and measurement cursor position" sp:fix
+        cbox id:axbCbox text:"Load registered Ax+B" sp:fix
+    hline
+    hlayout padding:5
+        hbtnbox text:OK id:okBtn
+        hspacer
+        hbtnbox text:Default id:defaultBtn
+        hspacer
+        hbtnbox text:Cancel id:cancelBtn

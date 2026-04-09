@@ -1,0 +1,43 @@
+vroot
+    vlayout padding:4
+        hlayout
+            hitembox id:handleTypeItembox items:"Measurement Point","Inspect Point" sp:exp,fix style:"QComboBox {font-size:11pt;}"
+            htextbox id:seqTitleTextield disable:true text:1 fw: 50
+            htextbox fw:120 id:templateTitleTextField
+            hbtnbox text:Template id:templateBtn
+                act text:"Dynamic Load" id:titleTempDLoadAct
+                act text:"Static Load" id:titleTempSLoadAct
+                act text:"Save" id:titleSaveAct
+            hbtnbox text:Option id:optionBtn
+        gflayout fstyle:box,plain flwidth:1 padding:5,8,4,8 hspacing:10
+            hitembox grid:0,0 sp:exp,fix id:posItembox
+                item text:"Coordinate" val:0
+                item text:"Relative Position" val:1
+            hlayout grid:0,1 spacing:3
+                label text:"dx:"
+                htextbox text:"0.00" fw:120 id:dxTextField
+                label text:"μm"
+            hbtnbox text:"Reg" grid:0,2 id:regPosBtn
+            hbtnbox text:"..." grid:0,3 id:regPosMoreBtn
+                @@ square_as: height square_use: fix
+            hlayout grid:1,1 spacing:3
+                label text:"dy:"
+                htextbox text:"0.00" fw:120 id:dyTextField
+                label text:"μm"
+            hbtnbox text:"Move" grid:1,2 id:movePosBtn
+            hspacer grid:0,4
+        hlayout align:hcenter
+            vline fh:8
+        unknow id:addressTemplateContent
+        hlayout align:hcenter
+            vline fh:8
+        unknow id:mpTemplateContent
+    hline
+    hlayout padding:3,8
+        hbtnbox id:okBtn text:OK style:"QPushButton {padding-left: 8px; padding-right:8px;}"
+        hspacer
+        hbtnbox id:wizardBtn text:"Wizard..."
+        hspacer
+        hbtnbox id:testBtn text:Test  style:"QPushButton {padding-left: 8px; padding-right:8px;}"
+        hspacer
+        hbtnbox id:cancelBtn text:Cancel  style:"QPushButton {padding-left: 4px; padding-right:4px;}"

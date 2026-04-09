@@ -1,0 +1,17 @@
+vroot minw: 410
+    vlayout id: autoPatternArea padding: 10 spacing: 10 align: top visible: false
+        label __class: PageText text: "If Auto is selected, a suitable pattern is selected automatically."
+        cbox id: autoCBox text: Auto sp: fix
+    
+    hlayout id: groupBoxArea padding: 5,20,5,20 align: left, top visible: false
+        gbox_v id: itemGBox fstyle: raised, box padding: 5 sp: fix, pref
+            
+    hlayout id: btnArea align: bottom, right visible: false
+        hlayout id: scanArea hk: true visible: false
+            label text: "Scan"
+            spacer minw: 5
+            hbtnbox text: "7-32" id: scan32Btn toggle: false
+            hbtnbox text: "7-64" id: scan64Btn toggle: false
+            hbtnbox text: "Slow-8" id: slow8Btn toggle: false
+            btngroup btns: scan32Btn, scan64Btn, slow8Btn
+        hbtnbox id: moveChipBtn text: "Move to Chip Origin"

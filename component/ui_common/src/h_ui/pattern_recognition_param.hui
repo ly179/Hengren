@@ -1,0 +1,216 @@
+vroot w:300 h:500
+    vlayout padding:5
+        label text:"Pattern Recognition" visible:false __class:"TitleText" id:omTitleLabel
+        cbox text:"Pattern Recognition" toggle:true __class:"TitleText" sp:fix id:semTitleCbox
+        hlayout padding:0,8 spacing:5 align:top,left sp:pref
+            vlayout align:top
+                label text:"Model"
+            ncanvas fw:120 fh:120 id:canvas
+            vlayout align:top spacing:10
+                hbtnbox text:"Action" id:actionBtn sp:fix style:"QPushButton {padding-left:8; padding-right:8;}"
+                    act id:regImageAct text:"Reg. Image"
+                    act id:infoAct text:Information
+                    act id:clearImageAct text:Clear
+                hlayout spacing:15
+                    radio text:Auto id:autoRadio hk:true
+                    radio text:Manual toggle:true id:manualRadio hk:true
+        tabpane id:detailWidget
+            glayout title:"Auto" sp:exp align:top padt:5
+                hlayout padl: 5 grid: 0, 0
+                    label text: Kind
+                hlayout padt: 5 grid: 0, 3 align: left
+                    ditembox id: kindItemBox sp: fix
+                hlayout padl: 5 grid: 1, 0
+                    label text: Algorithm
+                hlayout padb: 5 grid: 1, 3 align: left
+                    ditembox id: algItemBox sp: fix
+                hline grid:2,0,1,4
+                hspacer grid:3,1 min:80
+                hlayout padl:5 align:left grid:3,0,1,3 padb:5 id:energyFilterLabelContent
+                    cbox text:"Energy Filter" id:energyFilterCBox
+                hlayout grid:3,3 align:left spacing:20 padding: 5,5,5,0 id:energyFilterParamContent
+                    htextbox fw:50 disable:true id:energyFilterTextField
+                    label text:"BSE[%]"
+                    htextbox fw:50 disable:true id:energyFilterBseTextField
+                hline grid:4,0,1,4 id:energySpliter
+                hlayout padl:5 grid:5,0 sp:pref spacing: 5
+                    label text:ABC
+                    label text:"(0~100)" __class: "PageText"
+                hlayout padt: 5 grid:5,2 galign:right
+                    label text:"B:" 
+                hlayout padt:5 padr:5 grid:5,3 align:left spacing:10
+                    htextbox id:autoBTextField fw:60
+                    label text:"C:"
+                    htextbox id:autoCTextField fw:60
+                hlayout padl:5 grid:6,0,1,3
+                    label text:Acceptance
+                hlayout grid:6,3 align:left spacing:50 padr:5
+                    htextbox fw:50 id:autoAcceptanceTextField
+                    hlayout align:left spacing:20
+                        label text:Wait
+                        hlayout
+                            htextbox fw:50 id:autoWaitTextField
+                            label text:s
+                hlayout padl:5 align:left grid:7,0,1,3 id:minNumberLabelContent
+                    label text:"Min. Number"
+                hlayout grid:7,3 align:left padr:5 id:minNumberContent
+                    htextbox disable:true fw:50 id:autoMinNumber1TextField
+                    label text:"/"
+                    htextbox disable:true fw:50 id:autoMinNumber2TextField
+                
+                hlayout padl:5 align:left grid:8,0,1,3 id:centerLabelContent
+                    label text:"Centering"
+                hlayout grid:8,3 align:left padr:5 spacing:8 id:centerMinNoLabelContent
+                    ditembox id:autoCenterItemBox
+                    label text:"Min. Number"
+                    htextbox disable:true fw:50 id:autoCMinNumber1TextField
+                    label text:"/"
+                    htextbox disable:true fw:50 id:autoCMinNumber2TextField
+                
+                hlayout padl:5 grid:9,0,1,3 align:left id:autoOffsetLabelContent
+                    label text:Offset(μm)
+                hlayout align:left grid:9,3 padr:5 spacing:8 id:autoOffsetContent
+                    hlayout
+                        label text:"("
+                        htextbox fw:70 id:autoOffsetXTextField
+                        label text:","
+                        htextbox fw:70 id:autoOffsetYTextField
+                        label text:")"
+                    hbtnbox text:"Reg" id:autoOffsetRegBtn
+                
+                hlayout padl:5 grid:10,0,1,3 align:left
+                    label text:Rotation
+                hlayout align:left grid:10,3 padr:5 spacing:8
+                    hlayout
+                        htextbox disable:true fw:60 id:autoRotationTextField
+                        label text:"°"
+                    hlayout id:autoRotRageNoteContent
+                        label text:"(Range"
+                        htextbox disable:true text:"358.0" fw:50
+                        label text:"~"
+                        htextbox disable:true text:"2.0" fw:50
+                        label text:")"
+                hlayout align:left padl:5 grid:11,0,1,3
+                    label text:"Scan Mode"
+                hlayout align:left grid:11,3 padr:5 spacing:50
+                    ditembox id:autoScanRateItemBox
+                    cbox text:"Flat Mode" id:autoFlatModeItemBox
+                    
+                hlayout align:left grid:12,0,1,3 padl:5 id:autoFrameLabelContent
+                    label text:Frame
+                hlayout grid:12,3 spacing:20 padr:5 align:left id:autoFrameFilterContent
+                    ditembox id:autoFrameItemBox
+                    hlayout spacing:10
+                        label text:Filter
+                        ditembox id:autoFilterItemBox
+                
+                hlayout align:left grid:13,0,1,3 padl:5 id:autoFrameDetectionLabelContent
+                    label text:Frame(Detection)
+                hlayout grid:13,3 spacing:20 padr:5 id:autoFrameDMContent align:left
+                    ditembox id:autoFrameDetectionItemBox
+                    hlayout spacing:10
+                        label text:"(Measurement)"
+                        ditembox id:autoFrameMeasurementItemBox
+                        
+                hlayout align:left grid:14,0,1,3 padl:5
+                    label text:"Filter" id:autoFilterLabel
+                    cbox text:"Search Around" sp:fix id:searchAroundCBox
+                hlayout align:left grid:14,3 padr:5 spacing:10 id:autoFilterEContent
+                    ditembox id:autoEFilterItemBox hk:true
+                    cbox text:Evaluation id:autoEvaluationCBox
+                    htextbox disable:true fw:50 id:autoEvaluationTextField
+                
+                hlayout align:left grid:15,0,1,3 padl:5 id:autoEntireModeLabelContent
+                    label text:"Entire Mode"
+                hlayout align:left grid:15,3 padr:5 spacing:10 id:autoEntireContent
+                    ditembox id:autoEntireModeItemBox
+                    cbox text:"Contrast Mode" id:autoContrastModeCBox
+                    
+                hlayout align:left grid:16,0,1,3 padl:5 id:autoDcModeLabelContent
+                    label text:"D.C. Mode"
+                hlayout align:left grid:16,3 padr:5 spacing:10 id:autoDcModeContent
+                    ditembox  id:autoDcModeItemBox
+                
+                hline grid:17,0,1,4
+                hlayout grid:18,0,1,3 padl:5 align:left
+                    label text:"L/S Detection"
+                hlayout grid:18,3 align:left padr:5 spacing:10
+                    hitembox id:lsDetectionItemBox
+                        item text:ON val:0
+                        item text:"ON (Reverse)" val:1
+                        item text:OFF val:2
+                    cbox text:"Contrast Mode" id:lsContrastModeCBox
+                hlayout grid:19,0,1,3 padl:5 align:left
+                    label text:"Method"
+                hlayout grid:19,3 align:left padr:5
+                    hitembox id:autoMethodItemBox
+                        item text:Flex val:0
+                        item text:Tight val:1
+                        item text:Simulated val:2
+                        item text:None val:3
+                hlayout grid:20,0,1,3 padl:5 align:left
+                    label text:"Edge Detection"
+                hlayout grid:20,3 align:left padr:5
+                    hitembox id:autoEdgeDetectionItemBox
+                        item text:Peak val:0
+                        item text:Step val:1
+                hlayout grid:21,0,1,3 padl:5 padb:5 align:left
+                    label text:"Image Quality"
+                hlayout grid:21,3 align:left padb:5 padr:5
+                    hitembox id:imageQualityItemBox
+                        item text:Clear val:0
+                        item text:Normal val:0
+                        item text:Vague val:0
+            glayout title: "Manual" sp:exp align:top
+                hlayout padding: 5,0,0,5 grid:0,0 spacing:5 align: left
+                    label text:ABC
+                    label text:(0~100) __class:"PageText"
+                hspacer grid:0,1
+                label id:dLabel text:"Relative Position\n(μm)" align:right grid: 1,0 style:"QLabel {margin-left:3;}"
+                hline grid:2,0,1,8 id:dSplitLine
+                label text: Acceptance grid: 3,0,1,2 style:"QLabel {margin-left:3;}"  hk:true
+                label text:mag grid:4,0,1,2 style:"QLabel {margin-left:3;}"  hk:true id:magLabel
+                label text:Rot grid:5,0,1,2 style:"QLabel {margin-left:3;}" hk:true id:rotLabel
+                label text:Frame grid:6,0,1,2 style:"QLabel {margin-left:3;}" hk:true id:frameLabel
+                label text:Filter grid:7,0,1,2 style:"QLabel {margin-left:3;}" hk:true id:filterLabel
+                label text:Scan grid:8,0,1,2 style:"QLabel {margin-left:3; margin-bottom:3;}" hk:true id:scanLabel
+                hlayout padding:5,0,0,0 grid:0,2 id:bLabelContent
+                    label text:"B:" hk:true
+                label id:dLeftLabel text:"(" grid:1,2 galign:right
+                hlayout padding:5,0,0,0 grid:0,3  fw:70
+                    htextbox id:bTextField fw:60
+                htextbox grid:1,3 text:"0.00" fw:70 id:dPosXTextField
+                htextbox id: manualAcceptanceTextField fw: 50 grid: 3, 3
+                htextbox grid:4,3 fw:70 id:magTextField hk:true
+                htextbox grid:5,3 text:"0.0" fw:70 id:rotTextField  hk:true
+                ditembox grid:6,3 id:manualFrameItemBox sp:fix fw:70 hk:true
+                ditembox grid:7,3,1,3 id:manualFilterItemBox hk:true
+                radio text:View grid:8,3 toggle:true id:viewRadio hk:true
+                hlayout padding:0,0,5,0 grid:9,3
+                    radio text:Integ id:integRadio hk:true
+                hlayout padding:5,0,0,0 grid:0,4 id:cLabelContent
+                    label text:"C:" hk:true
+                label id:dCenterLabel text:"," grid:1,4
+                label text:"°" grid:5,4 id:rotUnitLabel
+                hlayout padding:5,0,0,0 grid:0,5 fw:70 id:cItemContent
+                    htextbox id:cTextField fw:60 hk:true
+                htextbox grid:1,5 text:"0.00" fw:70 id:dPosYTextField
+                label id:dRightLabel text:")" grid:1,6
+                hlayout padding:5,5,0,0 grid:0,7
+                    hbtnbox text:Read id:readBcBtn
+                hlayout padding:0,5,0,0 grid:1,7
+                    hbtnbox text:Reg id:dRegPosBtn
+                hlayout grid:8,5,1,2 galign:right
+                    label text:- hk:true id:viewLabel hk:true
+                    hitembox id:viewItemsBtn hk:true
+                        item text:"1/1" val:0
+    hline
+    hlayout padding:5
+        hlayout align:left
+            hbtnbox text:"OK" id:okBtn
+            hbtnbox text:"<<Back" id:backBtn
+            hbtnbox text:"Next>>" id:nextBtn
+        hlayout align:right
+            hbtnbox text:"Cancel" id:cancelBtn
+
+    btngroup btns:integRadio,viewRadio

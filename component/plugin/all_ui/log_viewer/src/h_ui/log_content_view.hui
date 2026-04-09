@@ -1,0 +1,9 @@
+groot hspacing: 10 vspacing: 10 padding: 5
+    + rowstretch: 0,0 rowstretch: 1,1
+    + colstretch: 0,1 colstretch: 1,0
+    hitembox id: filterBox eedit tedit grid: 0,0 minw: 200
+    hflayout grid: 0,1 flwidth: 2 fstyle: sunken, box
+        cbox id: enableRegCBox text: "Regular" sp: fix
+        vline minw: 4
+        cbox id: enableMatchCase text: "Match Case"
+    hbtnbox id: filterBtn grid: 0,2 text: Filter minw: 60 sp: fix

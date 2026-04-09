@@ -1,0 +1,10 @@
+[submodule "component"]
+	path = component
+	url = http://39.98.45.96:8801/Shisan/hengren_cdsem_component.git
+	branch = cmake_dev
+    ignore = all
+[submodule "data"]
+	path = data
+	url = http://39.98.45.96:8801/Shisan/hengren_data_component.git
+	branch = cmake_dev
+    ignore = all

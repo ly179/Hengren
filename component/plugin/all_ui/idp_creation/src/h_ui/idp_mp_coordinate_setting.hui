@@ -1,0 +1,38 @@
+vroot
+    vlayout padding:5
+        label text:Coordinate __class:TitleText
+        glayout padding:5
+            hspacer grid:0,1
+            hspacer grid:0,4
+            label text:"Chip No." grid:0,0
+            label text:"X:" grid:0,2
+            htextbox disable:true grid:0,3 fw:60 id:chipNoXTextField
+            label text:"Y:" grid:1,2
+            htextbox disable:true grid:1,3 fw:60 id:chipNoYTextField
+    hline
+    glayout padding:5 hspacing:5
+        hitembox grid:0,0 id:posItemBox
+            item text:"Coordinate" val:0
+            item text:"Relative Position" val:1
+        label text:"dx:" grid:0,1
+        htextbox fw:80 grid:0,2 id:dxTextField
+        label text:"μm" grid:0,3
+        hbtnbox text:Move grid:0,4 id:moveBtn
+        label text:"dy:" grid:1,1
+        htextbox fw:80 grid:1,2 id:dyTextField
+        label text:"μm" grid:1,3
+        hbtnbox text:Reg grid:1,4 id:posRegBtn
+    hline
+    vlayout padding:5
+        label text:"Chip Registration(Outside specification of chip)"
+        hlayout align:right
+            hbtnbox text:Reg id:chipRegBtn
+    hline
+    hlayout padding:5 align:left
+        cbox id:diffCBox text:"Differential movement\nfrom previous measurement position" sp:fix
+    hline
+    hlayout padding:5
+        hbtnbox text:"OK" id:okBtn
+        hbtnbox text:"Next>>" id:nextBtn
+        hspacer
+        hbtnbox text:"Cancel" id:cancelBtn

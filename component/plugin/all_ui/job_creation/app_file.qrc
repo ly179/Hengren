@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>hui/job_editor.hui</file>
+        <file>hui/job_item_editor.hui</file>
+        <file>hui/job_recipe_setting_editor.hui</file>
+        <file>hui/job_class_select_editor.hui</file>
+    </qresource>
+</RCC>

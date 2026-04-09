@@ -1,0 +1,28 @@
+vroot
+    vlayout padding: 5 spacing: 5
+        vlayout spacing: 5
+            label text: "Overlay Default Settings"
+            hlayout align: left
+                cbox id: profileCBox text: "Profile"
+                spacer minw: 5
+                vline
+                spacer minw: 5
+                cbox id: edgeCBox text: "Edge"
+                spacer minw: 5
+                vline
+                spacer minw: 5
+                cbox id: designCBox text: "Design"
+                spacer minw: 5
+                vline
+                spacer minw: 5
+                cbox id: measureCBox text: "Measure"
+                spacer minw: 5
+                vline
+                spacer minw: 5
+                cbox id: resultCBox text: "Result"
+        vlayout spacing: 5
+            label text: "Measurement Overlay List"
+            htable id: controlList minw: 500 minh: 80
+    hline
+    hlayout align: center padding: 5
+        hbtnbox id:closeBtn text:Close

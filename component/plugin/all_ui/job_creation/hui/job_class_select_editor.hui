@@ -1,0 +1,11 @@
+vroot
+    vlayout padding:5 spacing:5
+        hlayout
+            label text:Device
+            ditembox items:"H/D" id:deviceItemBox
+        label text:Class
+        hlist id:classListView
+        htextbox disable:true id:classSelectedTextField
+    hline
+    hlayout align:center padding:5
+        hbtnbox text:OK id:okBtn

@@ -1,0 +1,44 @@
+vroot
+    glayout padding:5 hspacing:3 minh:700
+        label text:"Sequence No. List" grid:0,0
+        htable grid:1,0 id:seqTable  minw:400
+        vlayout grid:1,1 align:top,left
+            hbtnbox id:moveBackBtn style:"QPushButton{padding:10 0;}"
+            hbtnbox id:moveForwardBtn  style:"QPushButton{padding:10 0;}"
+        hline grid:2,0
+        label text:"P No. List" grid:3,0
+        htable grid:4,0 id:pNoTable
+        vlayout grid:4,1
+            vlayout align:center
+                label text:Add
+                hbtnbox id:addBtn
+            vlayout align:center
+                label text:Delete
+                hbtnbox id:deleteBtn
+        hline grid:5,0
+        label text:"Template List" grid:6,0
+        htable grid:7,0 id:templateTable
+        vlayout grid:0,2,8,1
+            idw_canvas sp:exp id:idwCanvasContent
+            glayout hspacing:10
+                label text:"Mouse Operation: " grid:0,0
+                label text:"Left Button" grid:0,1
+                label text:": Select Chip(s)" grid:0,2
+                hlayout grid:0,4
+                    label text:"Count"
+                    htextbox disable:true fw:80 id:countTextField
+                label text:"Center Button" grid:1,1
+                label text:": Move MP/IP" grid:1,2
+                hlayout grid:1,4
+                    label text:"Magnify"
+                    hitembox items:"x1","x2","x3","x4" id:magBox
+                label text:"Center Button + Ctrl key" grid:2,1
+                label text:": Copy MP/IP" grid:2,2
+                cbox text:"Chip No." grid:2,4 sp:fix id:chipNoCbox
+                hspacer grid:0,3 min:80
+    hline
+    hlayout padding:3,10
+        hbtnbox text:OK id:okBtn
+        hspacer
+        hbtnbox text:Cancel id:cancelBtn
+        

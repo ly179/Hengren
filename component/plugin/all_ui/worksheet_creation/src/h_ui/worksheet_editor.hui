@@ -1,0 +1,52 @@
+vroot align:top
+    hlayout fwstretch:0
+        menubar fwstretch:1 style:"QMenuBar {border-right: none;}"
+            menu id:fileMenu text:File
+                act id: saveAct text: "Save"
+                act id: saveAsAct text: "Save as..."
+                act id: exportToXlsx text: "Export to XLSX"
+                split
+                act id:exitAct text:Exit
+            menu id:editMenu text:Edit
+            menu id:actionMenu text:Action
+                act text: "Measure Retry" id:measureRetryAct
+                act text: "Retry Rejected Data" id: retryRejectedAct
+                act text: "MP Move" id: moveAct
+                act text: "Load AMP" id: loadAmpAct
+                act text: "Get Measure Value" id: getMeasureValue
+                act text: "Get Value" id: getValueAct
+                act text: "Show FEM Result" id:showFemResultAct
+                act text: "Maintenance (11-50页)" id:maintenanceAct
+            menu id:imageMenu text:Image
+                act text: "Show MP Image" id:showMpImageAct
+                act text: "Show AP Image" id:showApImageAct
+                act text: "Display All MP Image" id:displayAllMpImageAct
+                act text: "Send Image" id:sendImageAct
+            menu id:modeMenu text:Mode
+            menu id:toolMenu text:Tools
+        menubar fwstretch:0 style:"QMenuBar {border-left: none;}"
+            menu id:helpMenu text:Help
+    hlayout spacing:5 fwstretch:0
+        vlayout padding:5,0,10,10 spacing:5 fwstretch:0
+            label text:Slot
+            hlist fw:60 hn:off fh:150
+        vline fwstretch:0
+        hlayout padding: 5, 5, 5, 0 fwstretch: 1
+            hscrollarea
+                glayout id:detailContent align:top,left padding:3 hspacing:5
+    hline
+    hlayout padding:3,10 fwstretch:0
+        hlayout fwstretch:1 spacing:5 align:left
+            hbtnbox text:Move id:moveBtn
+            hbtnbox text:"Get Value" id:getValueBtn
+            hbtnbox text:"Retry" id:retryBtn
+            hbtnbox text:Cancel id:cancelBtn
+        hlayout fwstretch:0 spacing:3 padl:50
+            loadpane id: loadingPane fw: 20 fh: 20 radius: 8 pradius: 1 hk: true
+            htextbox id:modifyTextField fw:100
+            hbtnbox text:Modify id:modifyBtn disable: true
+    hline
+    hlayout id:worksheetContent padding:3 fwstretch:1
+    hline
+    hlayout padding: 3
+        label id: infoLabel sp: ign, pref elide:right

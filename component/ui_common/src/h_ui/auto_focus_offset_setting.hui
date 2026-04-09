@@ -1,0 +1,16 @@
+vroot
+    vlayout padding:10
+        hlayout spacing:20 align:left
+            label text:"Auto Focus Offset" __class:"TitleText"
+            htextbox text:0 fw:70 id:offsetTextField
+        label __class:"PageText" text:"1.Please execute Auto focus by clicking [A.F Execute] button."
+        label __class:"PageText" id:diff2Label text:"2.Please focus manually."
+        label __class:"PageText" text:"3.Focus Offset value will be get after clicking\n[Get Offset] button."
+        label __class:"PageText" text:"4.Focus offset value will be set after clicking [Set] button."
+    hline
+    hlayout padding:10 spacing:10
+        hbtnbox text:"A.F Execute" id:afExeBtn
+        hbtnbox text:"Get Offset" disable:true id:getOffsetBtn
+        hbtnbox text:"Test" id:testBtn
+        hbtnbox text:Set id:setBtn
+        hbtnbox text:Cancel id:cancelBtn

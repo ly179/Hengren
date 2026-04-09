@@ -1,0 +1,18 @@
+vroot
+    hlayout padding:10,20 align:center spacing:3
+        label text:Rotation
+        spacer minw:20
+        htextbox id:rotateTextField fw:120
+        label text:°
+    hline
+    glayout padding:10,30 hspacing:20 align:center  style:"QPushButton{padding: 2 15}"
+        hbtnbox id:n45Btn text:"-45.0°" grid:0,0
+        hbtnbox id:p45Btn text:"45.0°" grid:0,1
+        hbtnbox id:n1Btn text:"-1.0°" grid:1,0
+        hbtnbox id:p1Btn text:"1.0°" grid:1,1
+        hbtnbox id:n01Btn text:"-0.1°" grid:2,0
+        hbtnbox id:p01Btn text:"0.1°" grid:2,1
+    hline
+    hlayout align:center padding:10
+        hbtnbox id:closeBtn text:Close
+        

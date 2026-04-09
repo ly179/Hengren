@@ -1,0 +1,22 @@
+hroot
+    hlayout
+        vlayout
+            hlayout fwstretch: 0
+                gflayout padding: 5 spacing: 5 flwidth: 2 fstyle: box, raised fwstretch: 0
+                    hbtnbox id: btn_worksheet text: "Work Sheet" grid: 0, 0
+                    hbtnbox id: btn_fileManager text: "File Manager" grid: 0, 1
+                    hbtnbox id: btn_templateManager text: "Template" grid: 1, 0
+                    hbtnbox id: btn_msr text: MSR grid: 1, 1
+                    hbtnbox id: btn_amp text: AMP grid: 2, 0
+                    hbtnbox id: btn_image text: Image grid: 2, 1
+                hflayout padding: 5 spacing: 5 flwidth: 2 fstyle: box, raised fwstretch: 1
+                    + style: "QFrame {background-color: rgb(255, 239, 219);} #btn_empty,#label_time,#label_emi {border-top: 2px solid rgb(163, 146, 126); border-left: 2px solid rgb(163, 146, 126); border-bottom: 2px solid rgb(201, 189, 173); border-right: 2px solid rgb(201, 189, 173);}" 
+                    glayout id: "_rgLayout" spacing: 5 style: "#_rgLayout {background-color: transparent;}"  fwstretch: 0
+                    vlayout spacing: 5 fwstretch: 1 id:_rvLayout style: "#_rvLayout {background-color: transparent;}"    
+                        label id: label_time text: "2007/09/19\n16:27" align: center fwstretch: 1
+            hlayout fwstretch: 1 minh: 550
+                htree id: imageTreeview fwstretch: 1 
+    vlayout id: centerWidget sp: exp spacing: 5 fwstretch: 3 
+        widget id: canvasContent
+            
+        

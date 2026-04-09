@@ -1,0 +1,15 @@
+vroot
+    vlayout padding:5
+        label __class: PageText wordwrap:true text:"The IDW information in the current IDP file does not match the IDW on the operation console. Do you want to load the current IDW to the operation console?"
+        label __class: PageText wordwrap: true text: "Note: If necessary, please switch the Wafer in the operation console to avoid affecting the machine's accurate positioning."
+    vlayout padding:5
+        radio id: loadToGlobalRadio text: "Load to operation console" sp:fix toggle: true
+        radio id: ignoreRadio text: "Ignore (Unable to edit using machine-shared data)" sp:fix
+    hline
+    hlayout padding:5 align:left
+        cbox id: loadIdpCheckBox text: "Load both the current IDP to the operation console" sp:fix
+    hline
+    hlayout padding: 5
+        hbtnbox id:okBtn text:OK minw: 60
+        hspacer
+        hbtnbox id:cancelBtn text:"Cancel" minw: 60

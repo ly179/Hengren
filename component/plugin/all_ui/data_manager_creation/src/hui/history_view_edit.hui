@@ -1,0 +1,26 @@
+vroot
+    vlayout padding:5
+        hlayout padding:5 spacing:10
+            label text:"File name" fwstretch:0
+            htextbox disable id:fileNameTextField fwstretch: 1
+        hlayout
+            vflayout flwidth:1 fstyle: sunken, box spacing:5
+                + padding:5
+                hlayout
+                    label text:"Current Version"
+                    hspacer
+                    hbtnbox text:Edit id:"currEditBtn"
+                htable id:currentVersionTable sp:exp,fix fh:85 vn:need
+        hlayout align:center fhstretch:0 sp:exp, fix
+            vline minh:10
+        hlayout fhstretch:1
+            vflayout flwidth:1 fstyle: sunken, box spacing:5
+                + padding:5
+                hlayout
+                    label text:"History List"
+                    hspacer
+                    hbtnbox text:Edit id:"historyEditBtn"
+                htable id:historyTable
+    hline
+    hlayout align:center padding:5
+        hbtnbox text:Close id:closeBtn

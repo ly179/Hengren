@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>hui/fem_measurement_editor.hui</file>
+        <file>hui/maintenance_editor.hui</file>
+        <file>hui/recipe_editor.hui</file>
+        <file>hui/recipe_environment_editor.hui</file>
+        <file>hui/recipe_eraser_editor.hui</file>
+        <file>hui/recipe_ref_check_editor.hui</file>
+        <file>hui/recipe_ref_data_selector.hui</file>
+    </qresource>
+</RCC>

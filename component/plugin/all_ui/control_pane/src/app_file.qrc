@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>hui/control_pane.hui</file>
+        <file>icons/reload.svg</file>
+    </qresource>
+</RCC>

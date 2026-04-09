@@ -1,0 +1,96 @@
+vroot align:top
+    hlayout
+        hlayout align:left
+            menubar sp:exp,pref style:"QMenuBar {border-right: 0px solid transparent;}"
+                menu text:File id:fileMenu
+                    act text:Save id:saveAct
+                    act text:"Save As..." id:saveAsAct
+                    act text:"Exit" id:exitAct
+                menu text:Option id:optionMenu
+                    act text:"Axis Alignment on wafer..." id:axisAct
+                    act text:"Image Environment" id:imgEnvAct
+                    act text:"Measurement Times" id:measureTimesAct
+        hlayout align:right
+            menubar  sp:pref style:"QMenuBar {border-left: 0px solid transparent;}"
+                menu text:Help id:helpMenu
+                
+    glayout padding:5 hspacing:5 vspacing:5
+        label text:Class grid:0,0
+        htextbox disable:true grid:0,1 id:classTextField
+        label text:IDW grid:0,3
+        htextbox disable:true grid:0,4 id:idwTextField
+        label text:IDP grid:1,0
+        htextbox disable:true grid:1,1 id:idpTextField
+        hspacer grid:0,2
+    hline
+    hlayout spacing:5 padding:5
+        hbtnbox text:"Electrified Sample Correction..." id:escBtn
+        hspacer
+        htextbox text:SPM outline:keep disable:true style:"QLineEdit {border: 2px solid transparent;}" id:escTextField
+    hline
+    
+    vsplitter stretch:0,1 stretch:1,2
+        vlayout padding:5
+            hlayout spacing:3
+                label text:"Wafer Alignment Point Information"  __class:TitleText
+                hspacer
+                hbtnbox text:Wizard id:apWizardBtn
+                hbtnbox text:Action
+                    act text:New id:apNewAction
+                    act text:Edit id:apEditAction
+                    menu text:Modify
+                        act text:"Chip No." id:apModifyChipAction
+                    act text:Cut id:apCutAction sqc:widget sqk:"Ctrl+X"
+                    act text:Copy id:apCopyAction sqc:widget sqk:"Ctrl+C"
+                    menu text:Paste id:apPasteMenu disable:true
+                        act text:"Before" sqc:widget sqk:"Ctrl+Shift+V" id:apPasteBeforeAct
+                        act text:"After" sqc:widget sqk:"Ctrl+V" id:apPasteAfterAct
+            htable id:apTable minh:150
+            hlayout spacing:5
+                hlayout align:left spacing:5
+                    label text:"Test Run"
+                    hbtnbox text:Alignment id:apAlignmentBtn
+                hlayout align:right
+                    hbtnbox text:Stop id:apStopBtn
+                    
+        vlayout padding:5 spacing:5
+            hlayout spacing:5
+                label text:"Wafer MP/IP Information" __class:TitleText
+                hspacer
+                hbtnbox text:Wizard id:mpWizardBtn
+                hbtnbox text:Chip id:mpChipBtn
+                hbtnbox text:Action
+                    act text:New id:mpNewAction
+                    act text:Edit id:mpEditAction
+                    menu text:Modify
+                        act text:"Chip No." id:mpModifyChipAction
+                        act text:"D No. by Each Measurement" id:mpModifyChipD_MAction
+                        act text:"D No. by Each P No." id:mpModifyChipD_PAction
+                        act text:"Ax+B Table No." id:mpModifyAxBAction
+                        act text:"Z Sensor Offset" id:mpModifyZSensorAction
+                        act text:"P No." id:mpModifyPAction
+                    act text:Duplicate id:mpDuplicateAction
+                    act text:"Shift Coordinate" id:mpShiftCoordinateAction
+                    split
+                    act text:"MP/IP Move" id:mpMoveAction
+                    split
+                    act text:"Select" id:mpSelectAction
+                    act text:"Sort" id:mpSortAction
+                    split
+                    act text:"Cut" id:mpCutAction sqc:widget sqk:"Ctrl+X"
+                    act text:"Copy" id:mpCopyAction sqc:widget sqk:"Ctrl+C"
+                    menu text:"Paste" id:mpPasteMenu disable:true
+                        act text:"Before" sqc:widget sqk:"Ctrl+Shift+V" id:mpPasteBeforeAct
+                        act text:"After" sqc:widget sqk:"Ctrl+V" id:mpPasteAfterAct
+                    act text:"AP Coordinate Matching" id:mpApCMatchAction
+            htable  minh:150 id:mpTable
+            glayout hspacing:10
+                label text:"Test Run" grid:0,0
+                hbtnbox text:"Z Sensor" grid:0,1 id:zSensorBtn
+                hbtnbox text:"Measurement" grid:1,1 id:measurementBtn
+                hbtnbox text:"Scan Overlap" id:"scanOverlapBtn" grid:2,1
+                vflayout flwidth:2 fstyle:box,plain grid:0,2,2,1 padding:2 sp: fix
+                    radio text:All toggle:true sp:exp id:allRadio
+                    radio text:Selected sp:exp id:selectedRadio
+                hspacer grid:0,3
+                hbtnbox text:Stop grid:1,4 id:mpStopBtn

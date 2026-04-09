@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>configs/log_highlight_config.properties</file>
+        <file>h_ui/log_view.hui</file>
+        <file>h_ui/log_history_view.hui</file>
+        <file>h_ui/log_content_view.hui</file>
+    </qresource>
+</RCC>

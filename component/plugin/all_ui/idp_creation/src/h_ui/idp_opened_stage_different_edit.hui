@@ -1,0 +1,19 @@
+vroot
+    vlayout padding: 5
+        label wordwrap: true __class: PageText text: "The IDW information on the operation console has been modified or unloaded."
+    vlayout padding: 5
+        radio id:reloadRadio text: "Reload the current IDW information to the operation console" sp:fix toggle: true
+        hlayout padl:20
+            label wordwrap: true __class: PageText text:"(Please verify if the Wafer in the machine matches the IDW information)"
+        radio id:saveRadio text:"Save and close" sp:fix
+        hlayout align:left spacing:5
+            radio id:saveAsRadio text: "Save as and close" sp:fix
+            htextbox id:saveAsFileNameTextField fw:200 ph:"Input File Name" disable
+        radio id:ignoreRadio text:"Ignore (Unable to edit using machine-shared data)" sp:fix
+        btngroup btns: reloadRadio, saveRadio, saveAsRadio, ignoreRadio
+    hline
+    hlayout padding:5 align:left
+        cbox id: loadIdpCheckBox text: "Load both the current IDP to the operation console" sp:fix
+    hline
+    hlayout align:center padding: 5
+        hbtnbox id:okBtn text:"OK" minw: 60

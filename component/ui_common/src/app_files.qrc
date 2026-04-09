@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>h_ui/auto_focus_offset_setting.hui</file>
+        <file>h_ui/auto_focus_setting.hui</file>
+        <file>h_ui/auto_focus_threshold_setting.hui</file>
+        <file>h_ui/data_selector.hui</file>
+        <file>h_ui/file_idp_copy_edit.hui</file>
+        <file>h_ui/file_idw_copy_edit.hui</file>
+        <file>h_ui/file_recipe_copy_edit.hui</file>
+        <file>h_ui/file_simple_copy_edit.hui</file>
+        <file>h_ui/focus_auto.hui</file>
+        <file>h_ui/focus_stigma.hui</file>
+        <file>h_ui/ifem_setting.hui</file>
+        <file>h_ui/image_scan_setting.hui</file>
+        <file>h_ui/img_env_setting.hui</file>
+        <file>h_ui/multi_shot_chip_selector.hui</file>
+        <file>h_ui/pattern_recognition.hui</file>
+        <file>h_ui/pattern_recognition_param.hui</file>
+        <file>h_ui/pattern_reg_info.hui</file>
+        <file>h_ui/pre_dose_setting.hui</file>
+        <file>h_ui/template_selector.hui</file>
+        <file>h_ui/z_sensor_setting.hui</file>
+    </qresource>
+</RCC>

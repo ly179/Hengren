@@ -1,0 +1,20 @@
+groot align:top vspacing:5
+    label text:Size grid:1,0
+    hitembox grid:1,1 id:saveSizeItemBox galign:left
+        item text:Full val:0
+        item text:Half val: 1
+    label text:"Compression" grid:2,0
+    hitembox grid:2,1 id:saveCompressionItemBox galign:left
+        item text:OFF val:0
+        item text:ON val: 1
+    label text:"Quality" grid:3,0 id:qualityLabel
+    htextbox grid:3,1 id:qualityTextField fw:60 ph: "1~255"
+    label text:"Overlay" grid:0,3
+    hspacer grid:0,2 min:20
+    vflayout flwidth:1 fstyle:plain,box grid:1,3,4,1 padding:2
+        cbox text:"Measurement Cursor" sp:fix id:overlayMeasurementCursorCBox
+        cbox text:"Cross Cursor" sp:fix id:overlayCrossCursorCBox
+        cbox text:"Area Cursor" sp:fix id:overlayAreaCursorCBox
+        cbox text:"Measurement Value" sp:fix id:overlayMeasurementValueCBox
+        cbox text:"Line Profile" sp:fix id:overlayLineProfileCBox
+        cbox text:"μm Marker" sp:fix id:overlayUmMarkerCBox

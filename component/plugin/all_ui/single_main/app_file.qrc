@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>hui/app_init_view.hui</file>
+    </qresource>
+</RCC>

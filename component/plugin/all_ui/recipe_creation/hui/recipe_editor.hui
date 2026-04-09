@@ -1,0 +1,44 @@
+vroot align:top
+    menubar sp:exp,fix
+        menu text:File
+            act text:"Save" id:saveAct
+            act text:"Save As..." id:saveAsAct
+            act text:"Exit" id:exitAct
+        menu text:Option
+            act text:Environment id:envAct
+    glayout align:left padding:10 hspacing:10
+        label text:Class grid:0,0
+        htextbox id:classTextField grid:1,0 disable:true
+        spacer minh:5 grid:2,0
+        label text:Recipe grid:3,0
+        htextbox id:recipeTextField grid:4,0 disable:true
+        spacer minh:5 grid:5,0
+        hbtnbox text:IDW id:idwBtn grid:6,0 fw:60
+        htextbox id:idwTextField grid:7,0 disable:true
+        spacer minh:5 grid:8,0
+        hbtnbox text:IDP id:idpBtn grid:9,0 fw:60
+        htextbox id:idpTextField grid:10,0 disable:true
+        spacer minh:7 grid:11,0
+        hlayout grid:12,0 spacing:5
+            label text:"SEM Condition No."
+            htextbox fw:40 id:semConditionNoTextField
+        spacer minh:5 grid:13,0
+        label text:"Wafer Property" grid:14,0
+        hlayout padding:5,0,5,12 grid:15,0 align:left
+            vflayout spacing:4 sp:fix flwidth:1 fstyle:sunken,box padding:5
+                radio text:HighOxide id:highOxideRadio sp:fix
+                radio text:Normal id:normalRadio sp:fix
+                radio text:ArF id:arfRadio sp:fix
+        cbox text:"Auto Calibration" id:autoCalibrationCBox grid:16,0 sp:fix
+        spacer minh:5 grid:17,0
+        gflayout padding:4 flwidth:1 fstyle:sunken,box grid:18,0 hspacing:5
+            radio text:"N/A" id:naRadio grid:0,0,1,2 sp:fix
+            radio text:"FEM Measurement" id:femMeasureRadio grid:1,0 sp:fix
+            hbtnbox text:"..." id:femMeasureBtn grid:1,1
+            radio text:"Maintenance" id:mainRadio grid:2,0 sp:fix
+            hbtnbox text:"..." id:mainBtn grid:2,1
+            radio text:"Microscale Meas." id:microscaleRadio grid:3,0 disable:true sp:fix
+            hbtnbox text:"..." id:microscaleBtn grid:3,1 disable:true
+            radio text:"Nanoscale Meas." id:nanoscaleRadio grid:4,0 disable:true sp:fix
+            hbtnbox text:"..." id:nanoscaleBtn grid:4,1 disable:true
+        cassette grid:1,1,18,1 id:cassetteWidget

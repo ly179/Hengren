@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>hui/procedure_manual_normal_window.hui</file>
+    </qresource>
+</RCC>

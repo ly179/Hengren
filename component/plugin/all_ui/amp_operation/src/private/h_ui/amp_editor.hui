@@ -1,0 +1,37 @@
+vroot
+    vlayout sp:exp,fix
+        hlayout padding:5
+            hlayout
+                hlayout align:bottom id:addSubContent
+                    hbtnbox text:"+" fw:20 fh:20 id:addBtn
+                    hbtnbox text:"-" fw:20 fh:20 id:subBtn
+                spacer minw:20
+                vlayout align:hcenter,top
+                    label text:Measurement align:center
+                    hitembox id:measurementOptionCBox
+                        item text:Width val:0
+                        item text:"Width Roughness" val:1
+                        item text:"Edge Roughness" val:2
+                        item text:"Diameter (Hole)" val:3
+                        item text:"Ellipse" val:4
+                        item text:"Gap" val:5
+                        item text:Corner val:6
+                        item text:"LWR Analysis" val:7
+                        item text:MPPC val:8
+                        item text:"Open/Close(Hole)" val:9
+                        item text:"External Meas." val:10
+            hspacer
+            vlayout align:vcenter
+                hbtnbox text:Action
+                    act text:"Save" id:saveAct
+                    act text:"Load" id:loadAct
+        hline
+    vlayout id:toolContent padding:5
+    vlayout sp:exp,fix
+        hline
+        hlayout padding:5
+            hbtnbox text:OK id:okBtn
+            hspacer
+            hbtnbox text:Apply id:applyBtn
+            hspacer
+            hbtnbox text:Cancel id:cancelBtn

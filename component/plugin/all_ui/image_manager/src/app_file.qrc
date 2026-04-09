@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>hui/image_view_edit.hui</file>
+        <file>hui/image_info_edit.hui</file>
+        <file>hui/image_overlay_edit.hui</file>
+        <file>hui/image_list_edit.hui</file>
+    </qresource>
+</RCC>

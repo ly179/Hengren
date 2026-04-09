@@ -1,0 +1,23 @@
+groot padding: 5
+    vlayout id: centerWidget sp: exp spacing: 5 grid: 0, 0, 2, 1
+        hlayout id: centerTitleWidget padding: 3, 0, 3, 0 spacing: 5 
+            label id: resultLabel sp: pref hk: true
+        unknow id: canvasContent
+    vlayout spacing: 5 padl: 5 grid: 0,2 align: top, hcenter id:toolFunctionContent
+        vlayout id: toolsWidget align: center
+            hbtn toggle id: vLineBtn tip: "Manual Horizontal Distance Tool" fw: 40 fh: 40
+            hbtn toggle id: hLineBtn tip: "Manual Vertical Distance Tool" fw: 40 fh: 40
+            hbtn toggle id: crossBtn tip: "Cross Tool" fw: 40 fh: 40
+            hbtn toggle id: rectBtn tip: "Area Box Tool" fw: 40 fh: 40
+            hbtn toggle id: locateCrossBtn tip: "Beam Shift Tool" fw: 40 fh: 40
+            hbtn toggle id: poundBtn fw: 40 fh: 40
+            hbtn toggle: true id: blankBtn fw: 40 fh: 40
+        vlayout style: "QPushButton {padding: 9px 0;}"
+            label id: iconLabel fw: 50 fh: 50
+            hbtnbox id: ampBtn text: AMP
+            hbtnbox id: amsBtn text: AMS
+            hbtnbox id: nextBtn text: Next
+    hlayout padding: 5, 0, 5,0 spacing: 5 grid: 2,0,1,3 sp: exp, fix
+        hlayout padr: 5
+            hbtnbox id: closeBtn text: Close
+            hbtnbox id: functionBtn text: Function

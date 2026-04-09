@@ -1,0 +1,6 @@
+vroot
+    hlayout padding:10
+        textarea disable:true id:textContent vn:on hn:on
+    hline
+    hlayout align:center padding:5
+        hbtnbox text:Close id:closeBtn

@@ -1,0 +1,9 @@
+#ifndef LOG_VIEW_GLOBAL_H
+#define LOG_VIEW_GLOBAL_H
+#include <QtGlobal>
+#ifdef LOG_VIEW_GLOBAL_LIB
+#define LOG_VIEW_LIB_EXPORT Q_DECL_EXPORT
+#else
+#define LOG_VIEW_LIB_EXPORT Q_DECL_IMPORT
+#endif
+#endif // LOG_VIEW_GLOBAL_H

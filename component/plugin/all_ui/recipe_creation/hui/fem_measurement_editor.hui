@@ -1,0 +1,36 @@
+vroot
+    vlayout padding:5
+        hlayout spacing:5
+            unknow id:femCanvas
+            glayout hspacing:2
+                hitembox id:femTypeItemBox grid:0,0,1,4
+                    item text:"X:Focus,Y:Exposure" val:0
+                    item text:"X:Exposure,Y:Focus" val:1
+                    item text:"Focus Only" val:2
+                label text:Focus grid:1,0,1,4
+                spacer minw:10 grid:2,0
+                label text:Start grid:2,1
+                htextbox fw:80 id:focusStartTextField grid:2,2
+                label text:"μm" grid:2,3
+                spacer minw:10 grid:3,0
+                label text:Step grid:3,1
+                htextbox fw:80 id:focusStepTextField grid:3,2
+                label text:"μm" grid:3,3
+                label text:Exposure grid:4,0,1,4
+                spacer minw:10 grid:5,0
+                label text:Start grid:6,1
+                htextbox fw:80 id:exposureStartTextField grid:6,2
+                label text:"mJ" grid:6,3
+                spacer minw:10 grid:7,0
+                label text:Step grid:7,1
+                htextbox fw:80 id:exposureStepTextField grid:7,2
+                label text:"mJ" grid:7,3
+        hlayout spacing:5 align:left
+            label text:"Start Chip"
+            radio text:"Lower Left Chip" id:lowLeftChipRadio toggle:true
+            radio text:"Center Chip" id:centerChipRadio
+    hline
+    hlayout padding:5
+        hbtnbox text:OK id:okBtn
+        hspacer
+        hbtnbox text:Cancel id:cancelBtn

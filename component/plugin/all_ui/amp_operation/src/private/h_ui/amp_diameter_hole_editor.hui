@@ -1,0 +1,108 @@
+vroot align:top
+    vlayout 
+        hlayout spacing:30 align:left padb:10
+            label text:Object
+            hitembox id:objectCBox
+                item text:"Inner Diameter" val:0
+                item text:"Outer Diameter" val:1
+                item text:"Middle Layer" val:2
+        glayout hspacing:20 vspacing:10 align:left
+            label text:Kind grid:0,0
+            hitembox id:kindCBox grid:0,1 galign:left
+                item text:"Single" val:0
+                item text:"Multi Point" val:1
+                item text:"Radial" val:2
+            label text:Data grid:1,0 id:dataLabelContent hk:true
+            hitembox grid:1,1 id:dataCBox hk:true
+                item text:Diameter val:0
+                item text:"X-Diameter" val:1
+                item text:"Y-Diameter" val:2
+                item text:"Major-axis" val:3
+                item text:"Minor-axis" val:4
+                item text:"45°" val:5
+                item text:"135°" val:6
+                item text:Area val:7
+                item text:"X/Y" val:8
+                item text:"Y/X" val:9
+                item text:"Minor/Major" val:10
+                item text:"Major/Minor" val:11
+                item text:"3 Sigma" val:12
+        glayout align:left hspacing:20 vspacing:10
+            label text:Direction grid:0,0 id:directionLabel
+            hitembox grid:0,1 galign:left id:directionCBox
+                item text:X val:0
+                item text:Y val:1
+            vlayout padt:5 grid:0,2 id:measurePointContent hk:true
+                label text:"Measurement Point"
+                label text:"(8,16,32)" style:"QLabel{font-size: 8pt;}"
+            htextbox grid:0,3 ph:16 fw:40 galign:top id:measurePointTextField hk:true
+            vlayout padt:5 grid:0,2 id:diametersLabelContent visible:false
+                label text:"Diameters"
+                label text:"(4~24)" style:"QLabel{font-size: 8pt;}"
+            htextbox grid:0,3 fw:40 ph:8 galign:top id:diametersTextField visible:false
+            label text:Centering grid:1,0
+            hitembox grid:1,1 galign:left id:centerCBox
+                item text:OFF val:0
+                item text:ON val:1
+            vlayout padt:5 grid:1,2 id:sumLineOrPointContent hk:true
+                label text:"Sum Lines/Point"
+                label text:"(1~64)" style:"QLabel{font-size: 8pt;}"
+            htextbox grid:1,3 ph:16 fw:40 galign:top id:sumLineOrPointTextField hk:true
+        hlayout align:right padr:10 spacing:40 id:preProcessContent
+            label text:"Pre Process"
+            hitembox id:preProcessCBox
+                item text:Inverse val:0
+                item text:Shading val:1
+                item text:None val:2
+        hlayout spacing:5 padding:5 align:left
+            hitembox id:acdCBox
+                item text:"ACD" val:0
+                item text:"Min CD" val:1
+                item text:"Max CD" val:2
+                item text:"3Sigma CD" val:3
+                item text:"Mean’ " val:4
+            ditembox id:acdTypeCBox
+            label text:Target
+            htextbox fw:40 ph:1 id:acdTargetTextField
+            label text:Limit
+            htextbox fw:40 ph:1 id:acdLimitTextField
+    hline
+    glayout vspacing:5 align:left padt:7 padb:7
+        label text:Method grid:0,0
+        hitembox grid:0,1 galign:left id:methodCBox
+            item text:"Linear" val:0
+            item text:"Threshold" val:1
+            item text:"Differential" val:2
+            item text:"Zero Cross" val:3
+        vlayout padt:5 grid:1,0
+            label text:"Design Value"
+            label text:"(1.0~200000.0)" style:"QLabel{font-size: 8pt;}"
+        hlayout grid:1,1,1,3 galign:top,left spacing:5
+            htextbox fw:100 ph:"500.0" id:designValueTextFiled
+            label text:nm
+        vlayout padt:5 grid:2,0
+            label text:"Search Area"
+            label text:"(10~150)" style:"QLabel{font-size: 8pt;}"
+        htextbox fw:60 ph:80 grid:2,1 galign:top id:searchAreaTextField
+        vlayout padt:5 grid:2,2
+            label text:"Smoothing"
+            label text:"(1~29(odd))" style:"QLabel{font-size: 8pt;}"
+        htextbox fw:60 ph:7 grid:2,3 galign:top id:smoothingTextField
+        vlayout padt:5 grid:3,0
+            label id:sumLineLabel text:"Sum Line"
+            label id:inspectAreaLabel text:"Inspect Area" visible: false
+            label id:lineInspectAreaLabel text:"(1~400)" style:"QLabel{font-size: 8pt;}"
+            label id:radialInspectAreaLabel text:"(2~32°)" style:"QLabel{font-size: 8pt;}" visible:false
+        vlayout grid:3,1 galign:top 
+            htextbox fw:60 ph:20 id:radialInspectAreaTextField visible: false
+            htextbox fw:60 ph:100 id:lineInspectAreaTextField
+        vlayout padt:5 grid:3,2
+            label text:"Differential"
+            label text:"(3~19(odd))" style:"QLabel{font-size: 8pt;}"
+        htextbox fw:60 ph:5 grid:3,3 galign:top id:diffTextField
+    hline
+    ampds id:commonSettingController
+    hline
+    hlayout align:left spacing:10
+        label text:"Measurement Position"
+        ditembox id:measurePositionCBox

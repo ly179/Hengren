@@ -1,0 +1,47 @@
+vroot align:top
+    glayout hspacing:50
+        hspacer grid:0,2
+        label text:Object grid:0,0
+        hitembox grid:0,1 galign:left id:objectCBox
+        label text:Edge grid:1,0
+        hitembox grid:1,1 galign:left id:edgeCBox
+            item text:Outer val:0
+            item text:Inner val:1
+        label text:Data grid:2,0
+        hitembox grid:2,1 galign:left id:dataCBox
+            item text:Roundness val:0
+            item text:Radius val:1
+        hlayout grid:3,0,1,3 align:right spacing:10
+            vlayout padt:5
+                label text:"Measurement Point"
+                label text:"(1~64)" style:"QLabel{font-size: 8pt;}"
+            vlayout align:top
+                htextbox ph:16 fw:30 id:measurePointTextField
+    hline
+    glayout align:left hspacing:20 padb:5 padt:5
+        label text:Method grid:0,0
+        hitembox grid:0,1,1,3 galign:left id:methodCBox
+            item text:Linear val:0
+            item text:Threshold val:1
+            item text:Differential val:2
+        vlayout padt:5 grid:1,0
+            label text:"Desigin Value"
+            label text:"(1.0~200000.0)" style:"QLabel{font-size: 8pt;}"
+        hlayout align:top grid:1,1,1,3 spacing:5
+            htextbox ph:"50.0" fw:80 id:designValueTextField
+            label text:nm
+        vlayout padt:5 grid:2,0
+            label text:"Smoothing"
+            label text:"(1~29(odd))" style:"QLabel{font-size: 8pt;}"
+        htextbox ph:7 fw:40 galign:top grid:2,1 id:smoothingTextField
+        vlayout padt:5 padl:10 grid:2,2
+            label text:"Differential"
+            label text:"(3~19(odd))" style:"QLabel{font-size: 8pt;}"
+        htextbox ph:5 fw:40 galign:top grid:2,3 id:diffTextField
+    hline
+    hlayout align:left spacing:110 padt:5
+        vlayout
+            label text:"Threshold"
+            label text:"(0~100%)" style:"QLabel{font-size: 8pt;}"
+        vlayout align:top
+            htextbox ph:50 fw:60 id:thresholdTextField

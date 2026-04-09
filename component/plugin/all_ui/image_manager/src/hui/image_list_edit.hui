@@ -1,0 +1,19 @@
+vroot
+    hlayout padding: 5 fwstretch: 1
+        hscrollarea hb hn: need vn: need id:imageScrollArea
+            flayout id:imageListContent style: "QWidget {background-color: rgb(197, 197, 197);} QLabel {font-size: 10px; font-weight: normal;}"
+    hline
+    hlayout padding: 5 fwstretch: 0 spacing: 5
+        label id: "detailLabel" fwstretch: 1 sp:ign, pref elide: right
+        hlayout fwstretch: 0
+            loadpane hk: true fw: 25 fh: 25 radius: 10 pradius: 1 id: processPane
+            hlayout id: pageWidget
+                hbtnbox id: prevBtn text: Prev
+                htextbox id: pageTextField fw: 40
+                label text: "/"
+                label id: totalLabel text: 1
+                hbtnbox id: nextBtn text: Next
+                spacer minw: 5
+                vline
+                spacer minw: 5
+            hbtnbox id:closeBtn text: Close

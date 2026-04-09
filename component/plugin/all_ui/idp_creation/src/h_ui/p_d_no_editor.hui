@@ -1,0 +1,15 @@
+vroot
+    hlayout padding:10 spacing:10
+        htable id:contentTable hn:need
+        vlayout
+            glayout hspacing:5 vspacing:5
+                label text:"P No." id:titleLabel grid:0,0
+                htextbox id:noTextField grid:0,1 fw:80
+                hbtnbox id:applyBtn grid:1,1 text:Apply
+            vspacer
+            hbtnbox id:"reNumBtn" text:"Re-Numbering"
+    hline
+    hlayout padding:5
+        hbtnbox id:okBtn text:OK
+        hspacer
+        hbtnbox id:cancelBtn text:Cancel

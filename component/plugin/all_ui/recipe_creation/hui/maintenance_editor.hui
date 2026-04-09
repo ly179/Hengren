@@ -1,0 +1,60 @@
+vroot
+    glayout padding:5 hspacing:5 align:left
+        cbox id:scopeCorrectionCBox text:"OM-SEM Scope Correction" grid:0,0,1,7 sp:fix
+        label text:"Target ± Range : " grid:1,0
+        label text:"X:" grid:1,1
+        htextbox fw:80 grid:1,2 id:scopeXTextField
+        label text:"±" grid:1,3
+        htextbox fw:80 grid:1,4 id:scopeXDiffTextField
+        spacer minw:4 grid:1,5
+        label text:"μm" grid:1,6
+        label text:"Y:" grid:2,1
+        htextbox fw:80 grid:2,2 id:scopeYTextField
+        label text:"±" grid:2,3
+        htextbox fw:80 grid:2,4 id:scopeYDiffTextField
+        label text:"μm" grid:2,6
+        hlayout grid:3,0,1,7 padl:30 sp:fix
+            cbox id:scopeAllowAdjustmentCBox text:"Allow adjustment"
+    hline
+    vlayout padding:5
+        cbox id:"zSensorCBox" text:"Z Sensor Offset" sp:fix
+        hlayout spacing:5 align:left
+            label text:"Target ± Range :"
+            spacer minw:22
+            htextbox fw:80 id:zSensorTextField
+            label text:"±"
+            htextbox fw:80 id:zSensorDiffTextField
+        hlayout padl:30 sp:fix
+            cbox id:zSensorAllowAdjustmentCBox text:"Allow adjustment"
+    hline
+    glayout padding:5 hspacing:5
+        cbox id:cdCheckCBox text:"CD Check" grid:0,0,1,3 sp:fix
+        label text:"Reference MSR" id:cdCheckRefLabel disable:true grid:1,0 galign:right
+        htextbox id:cdCheckRefTextField fw:230 disable:true grid:1,1
+        hbtnbox id:cdCheckRefMoreBtn disable:true grid:1,2 text:"..."
+        label text:"Measure" id:cdCheckMeasureLabel disable:true fw:60 grid:2,0 galign:right
+        hlayout grid:2,1,1,2 spacing:5
+            htextbox fw:70 disable:true id:cdCheckMeasureTextField
+            label text:"MPs every execution." id:cdCheckMeasureExeLabel disable:true
+        label text:"Next MSR No." grid:3,0 galign:right disable:true id:cdCheckNextMsrNoLabel
+        htextbox fw:70 disable:true id:cdCheckNextMsrNoTextField grid:3,1
+    hline
+    vlayout padding:5
+        cbox id:stageMonitorCBox text:"Stage Monitor" sp:fix
+        hlayout padl:30 spacing:10 align:left
+            label text:"Range:" disable:true id:stageMonitorRangeLabel
+            spacer minw:10
+            label text:"±" disable:true id:stageMonitorRangeDiffLabel
+            htextbox id:stageMonitorTextField disable:true fw:80
+            label text:"μm" id:stageMonitorUnitLabel disable:true
+    hline
+    vlayout padding:5
+        cbox text:"PG Monitor" id:pgMonitorCBox sp:fix
+        hlayout padl:30 spacing:15 align:left
+            label text:"Steup" disable:true id:pgMonitorSetupLabel
+            hbtnbox text:"..." disable:true id:pgMonitorSteupMorBtn
+    hline
+    hlayout padding:5
+        hbtnbox text:OK id:okBtn
+        hspacer
+        hbtnbox text:Cancel id:cancalBtn

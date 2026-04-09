@@ -1,0 +1,12 @@
+vroot
+    hlayout padding:5
+        label text:"Please select overlapping "
+        label id:shotChipLabel text: "chip"
+        label text: "s from the list"
+    hlayout padding:5
+        hlist id:shotChipList
+    hline
+    hlayout padding:5
+        hbtnbox id:okBtn text:OK minw: 60
+        hspacer
+        hbtnbox id:cancelBtn text:Cancel minw: 60

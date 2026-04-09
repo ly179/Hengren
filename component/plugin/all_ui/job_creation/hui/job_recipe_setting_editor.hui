@@ -1,0 +1,67 @@
+vroot
+    hlayout
+        vlayout padding:5 fwstretch:1
+            hlayout spacing:5
+                label text:"Setting Port :"
+                htextbox disable:true id:portTextField fw:30
+            hlayout
+                hbtnbox text:"Class" id:classSelectBtn sp:fix
+                htextbox disable:true id:classTextField
+            hlayout
+                label text:"Recipe Name"
+                hbtnbox text:"Action" id:actionBtn sp:fix
+                    act text:"Filter By IDW" id:filterByIdwAct
+                    act text:"View All" id:viewAllAct
+            hlist id:recipeListView
+            spacer minh:20
+            glayout hspacing:5
+                label text:"Recipe" grid:0,0
+                htextbox disable:true grid:0,1 id:recipeTextField
+                label text:IDW grid:1,0
+                htextbox disable:true grid:1,1 id:idwTextField
+                label text:IDP grid:2,0
+                htextbox disable:true grid:2,1 id:idpTextField
+                label text:"User Data" grid:3,0
+                hlayout grid:3,1
+                    hbtnbox text:Set id:setBtn sp:fix
+                    hlayout align:right spacing:5
+                        label text:Slot
+                        htextbox disable:true id:userDataSlotTextField fw:35
+                label text:Operator grid:4,0
+                htextbox id:operatorTextField grid:4,1
+                label text:"Lot ID" grid:5,0
+                htextbox id:lotIdTextField grid:5,1
+                label text:Process grid:6,0
+                htextbox id:processTextField grid:6,1
+                label text:Equipment grid:7,0
+                htextbox id:equipmentTextField grid:7,1
+                label text:"Wafer ID" grid:8,0
+                htextbox id:waferIdTextField grid:8,1
+                label text:Comment grid:9,0
+                htextbox id:commentTextField grid:9,1
+        vline
+        vlayout align:top
+            hlayout padding:10,5 spacing:5
+                label text:"Recipe Unit"
+                hitembox id:recipeUintItemBox sp:fix
+                    item text:"Cassette" val:0
+                    item text:"Slot" val:1
+            hline
+            vlayout spacing:5 align:top padding:5
+                spacer minh:10
+                label text:"Cassette Information" align:center
+                spacer minh:20
+                cassette id:cassetteWidget 
+                radio text:"Slot Appointment" id:slotAppointRadio toggle:true sp:fix
+                radio text:"Change Environment" id:changeEnvRadio sp:fix
+                radio text:"Edit User Data" id:editUserDataRadio sp:fix
+                radio text:"Slot Information" id:slotInfoRadio sp:fix
+    hline
+    hlayout padding:5
+        hbtnbox text:Close id:closeBtn
+        hspacer
+        hbtnbox text:Execute id:exeBtn
+        hspacer
+        hbtnbox text:"Restart..." id:restartBtn
+        hspacer
+        hbtnbox text:Clear id:clearBtn

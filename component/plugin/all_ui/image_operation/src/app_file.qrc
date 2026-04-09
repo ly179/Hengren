@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>h_ui/image_operation_rotate_editor.hui</file>
+        <file>icon/align.png</file>
+        <file>icon/close.png</file>
+        <file>icon/cursor_center.png</file>
+        <file>icon/free_move.png</file>
+        <file>icon/free_move_selected.png</file>
+        <file>icon/open.png</file>
+        <file>icon/sort.png</file>
+        <file>icon/detect.png</file>
+        <file>h_ui/image_operation_edit.hui</file>
+    </qresource>
+</RCC>

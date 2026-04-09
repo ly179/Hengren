@@ -1,0 +1,18 @@
+vroot
+    vlayout padding:5
+        hlayout align:left
+            cbox text:"Z Sensor" id:enableCbox
+        vlayout padding: 0,15 id:paramContent disable:true
+            label __class:PageText text:"In case of readjustment,\nfocus on wafer and click [Adjust] button."
+            hlayout padding: 10,0,0,0 spacing: 3 align:left
+                label text:"Offset"
+                htextbox text:0 fw:80 id:offsetTextField
+                hbtnbox text:Adjust id:adjustBtn
+    hline
+    hlayout padding:5
+        hlayout align:left
+            hbtnbox text:OK id:okBtn
+            hbtnbox text:"<<Back" id:backBtn
+            hbtnbox text:"Next>>" id:nextBtn
+        hlayout align:right
+            hbtnbox text:"Cancel" id:cancelBtn

@@ -1,0 +1,39 @@
+vroot align: top
+    hlayout
+        menubar style: "QMenuBar {border-right: 2px solid transparent;}" fwstretch: 1
+            menu text: File
+                act text: Reload id: reloadAct
+                act text: Exit id: exitAct
+            menu text: Device
+            menu text: Option
+            menu text: show
+        menubar sp: pref style: "border-left: 2px solid transparent;" fwstretch: 0
+            menu text: Help
+    vlayout
+        hlayout padding: 5, 5, 0, 5
+            hbtnbox id: deviceBtn text:Device 
+            htextbox id: deviceTextField fw: 150 text: "H/D" disable
+            hlayout align: right padr: 20 fwstretch: 1
+                label id: freeLabel text: 1111MB
+        glayout minh: 300 hspacing: 5 padb: 10
+            + colstretch: 1,1 colstretch: 2, 2
+            spacer minw: 5 grid: 0, 0
+            spacer minw: 5 grid: 0, 3
+            label text: Class grid: 0, 1
+            hlist id: classList minw: 200 grid: 1, 1
+            hlayout grid: 0, 2
+                label text: MSR
+                loadpane id: processPane radius: 10 pradius: 1 fw: 25 fh: 25 hk: true visible: false
+            hlist id: msrList minw: 350 grid: 1, 2
+            hlayout grid: 2, 1
+                label text: "Class:"
+                htextbox id: classCountTextField fw: 100 disable align: right
+            hlayout grid: 2, 2
+                label text: "MSR:"
+                htextbox id: msrCountTextField fw: 100 disable align: right
+            hline grid: 3,0,1,4
+            spacer minh: 3 grid: 4,0
+            label text: "Select Class" grid: 5,1
+            htextbox disable id:selectedClassTextField grid: 6,1
+            label text: "Select MSR" grid: 5,2
+            htextbox disable id:selectedMsrTextField grid: 6,2

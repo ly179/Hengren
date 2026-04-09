@@ -1,0 +1,73 @@
+vroot align:top
+    glayout padt:5 padb:5 align:left
+        label text:Kind grid:0,0
+        hitembox grid:0,1 galign:left id:kindCBox
+            item text:"Parallel" val:0
+            item text:"Sector" val:1
+        label text:Data grid:1,0
+        hitembox grid:1,1 galign:left id:dataCBox
+            item text:"Projected Distance(Absolute)" val:0
+            item text:"Project Distance(Signed)"
+            item text:"Minimum Distance"
+        hlayout grid:2,0 galign:bottom padb:10
+            label text:"Direction"
+        glayout grid:2,1 galign:right align:top
+            hitembox grid:1,0 id:directCBox
+                item text:X val:0
+                item text:Y val:1
+            vlayout grid:0,1 padt:5
+                label text:"Measurement Point"
+                label text:"(8,16,32)" style:"QLabel {font-size:8pt;}"
+            htextbox fw:40 ph:16 grid:0,2 galign:top id:measurePointTextField
+            vlayout grid:1,1 padt:5
+                label text:"Sum Lines / Point"
+                label text:"(1~64)" style:"QLabel {font-size:8pt;}"
+            htextbox fw:40 ph:16 grid:1,2 galign:top id:sumLineOrPointTextField
+        label text:ACD grid:3,0
+        hlayout grid:3,1 align:left spacing:5
+            ditembox id:acdCBox
+            label text:Target
+            htextbox fw:40 ph:1 id:acdTargetTextField
+            label text:Limit
+            htextbox fw:40 ph:1 id:acdLimitTextField
+    hline
+    glayout hspacing:5 align:left
+        label text:Method grid:0,0 sp:pref galign:left
+        hitembox grid:0,1 sp:pref galign:left id:methodCBox
+            item text:Linear val:0
+            item text:Threshold val:1
+            item text:Differential val:2
+        vlayout grid:1,0 padt:5
+            label text:"Design Value"
+            label text:"(0.0~200000.0)" style:"QLabel {font-size:8pt;}"
+        htextbox fw:80 ph:"500.0" grid:1,1 galign:top id:designValueTextField
+        hlayout grid:1,2 padb:10
+            label text:nm 
+        vlayout grid:2,0 padt:5
+            label text:"Position Offset"
+            label text:"(-200000.0~200000.0)" style:"QLabel {font-size:8pt;}"
+        htextbox fw:80 ph:"1000.0" grid:2,1 galign:top id:positionOffsetTextField
+        hlayout grid:2,2 padb:10
+            label text:nm 
+        glayout grid:3,0,1,3 hspacing:20
+            hspacer grid:0,4
+            vlayout grid:0,0 padt:5
+                label text:"Search Area"
+                label text:"(10~300)" style:"QLabel {font-size:8pt;}"
+            htextbox fw:60 ph:80 grid:0,1 galign:top id:searchAreaTextField
+            vlayout grid:0,2 padt:5
+                label text:"Smoothing"
+                label text:"(1~29(odd))" style:"QLabel {font-size:8pt;}"
+            htextbox fw:60 ph:7 grid:0,3 galign:top id:smoothintTextField
+            vlayout grid:1,0 padt:5
+                label text:"Inspect Area"
+                label text:"(10~400)" style:"QLabel {font-size:8pt;}"
+            htextbox fw:60 ph:100 grid:1,1 galign:top id:inspectAreaTextField
+            vlayout grid:1,2 padt:5
+                label text:"Differential"
+                label text:"(3~19(odd))" style:"QLabel {font-size:8pt;}"
+            htextbox fw:60 ph:5 grid:1,3 galign:top id:diffTextField
+    hline
+    ampds id:commonSettingController
+        
+            

@@ -1,0 +1,7 @@
+vroot
+    hlayout padding: 5
+        hscrollarea hn: need vn:need hb
+            glayout padding: 10 id: content align:top
+    hline
+    hlayout padding: 5 align: center
+        hbtnbox id: closeBtn text:Exit

@@ -1,0 +1,5 @@
+**/*.dmp
+**/*.log
+**/temp_img
+**/tmp_temp_img
+**/logs

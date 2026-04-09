@@ -1,0 +1,28 @@
+vroot
+    vlayout padding:5 spacing:4 id:mpFocusContent
+        cbox text:Focusing __class:TitleText sp:fix,pref id:focusCbox
+        vflayout padding:2 flwidth:1 fstyle:sunken,box spacing:5 id:mpFocusDetailContent
+            hlayout align:left
+                radio text:"Stigma&&Focus" id:stigmaAndFocusRadio
+                    
+        hflayout padding:4 flwidth:1 fstyle:sunken,box
+            hlayout align:left
+                radio text:Offset id:offsetRadio
+            label text:Offset
+            hlayout
+                htextbox text:"0" fw:70 id:offsetTextField
+                label text:"(LSB)"
+                
+    vlayout padding:5 spacing:4 id:apFocusContent
+        cbox text:"Auto Focus" __class:TitleText sp:fix,pref id:autoFocusCbox
+        vlayout padding:2 spacing:5 id:apFocusDetailContent
+    hline
+    hlayout padding:5
+        hbtnbox text:OK id:okBtn
+        hbtnbox text:"<<Back" id:backBtn
+        hbtnbox text:"Next>>" id:nextBtn
+        hspacer
+        hbtnbox text:Cancel id:cancelBtn
+    vlayout       
+    btngroup btns:stigmaAndFocusRadio,offsetRadio
+        

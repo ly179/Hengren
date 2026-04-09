@@ -1,0 +1,23 @@
+vroot
+    vlayout padding:15 spacing:20
+        glayout spacing:3 align:left
+            label text:"MP/IP" grid:0, 0
+            htextbox disable:true fw:100 id:pTextField grid:0, 1
+            hlayout padl: 5 grid:0, 2
+                label text:"Information"
+            label text:"Chip" grid:1, 0
+            htextbox disable: true fw:100 id:chipTextField grid: 1, 1
+            hbtnbox text:"Re-Numbering" id:renumBtn grid: 1,2
+    hline
+    hlayout padding:5
+        htable id: measureTable
+    hlayout spacing:5 padding: 5 align:left
+        label text:"D No."
+        htextbox id:dNoTextField fw:100
+        hspacer
+        hbtnbox id:modifyBtn text:Apply
+    hline
+    hlayout padding:10
+        hbtnbox text:OK id:okBtn mark:true
+        hspacer
+        hbtnbox text:Cancel id:cancelBtn

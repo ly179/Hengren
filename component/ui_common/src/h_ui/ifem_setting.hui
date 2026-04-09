@@ -1,0 +1,56 @@
+vroot
+    glayout padding:10,20 align:top,left hspacing:10 sp:exp
+        label text:Kind grid:0,0
+        spacer minw:10 sp:fix grid:0,1
+        hitembox id:kindCBox grid:0,2,1,3 sp:fix
+            item text:"n-Bar" val:0
+            item text:"Pierce" val:1
+            item text:"Hole" val:2
+        label text:"Diameter" grid:1,0 id:diameterLabel
+        htextbox fw:70 id:diameterTextField grid:1,2
+        label text:nm grid:1,3 id:diameterUnitLabel
+        label text:"(50.0~2000.0)" grid:1,4 id:diameterRangeLabel
+        label text:"Width(1)" grid:2,0 id:widthLabel
+        htextbox fw:70 id:widthTextField grid:2,2
+        label text:nm grid:2,3 id:widthUnitLabel
+        label text:"(50.0~2000.0)" grid:2,4 id:widthRangeLabel
+        label text:"Pitch X" grid:3,0
+        htextbox fw:70 id:pitchXTextField grid:3,2
+        label text:nm grid:3,3
+        label text:"(50.0~2000.0)" grid:3,4
+        label text:"Pitch Y" grid:4,0 id:pitchYLabel
+        htextbox fw:70 id:pitchYTextField grid:4,2
+        label text:nm grid:4,3 id:pitchYUnitLabel
+        label text:"(50.0~2000.0)" grid:4,4 id:pitchYRangeLabel
+        label text:"Length Y" grid:5,0 id:lenYLabel
+        htextbox fw:70 id:lengthYTextField grid:5,2
+        label text:nm grid:5,3 id:lenYUnitLabel
+        label text:"(100.0~10000.0)" grid:5,4 id:lenYRangeLabel
+        label text:"Number X" grid:6,0
+        htextbox fw:70 id:numberXTextField grid:6,2
+        label text:"(1~9)" grid:6,4 id:numberXRangeLabel
+        label text:"Number Y" grid:7,0 id:numberYLabel
+        htextbox fw:70 id:numberYTextField grid:7,2
+        label text:"(1~9)" grid:7,4 id:numberYRangeLabel
+        hlayout padl:10 grid:8,0,1,5 align:left
+            radio text:"Measure Cursor Position" id:measureCursorPosRadio toggle:true
+        hlayout padl:10 grid:9,0,1,5 align:left
+            radio text:"Select Measurement Position" id:selectMeasurePosRadio
+        hlayout padl:15 grid:10,0,1,2
+            label text:"Target X"
+        htextbox fw:70 grid:10,2 id:targetXTextField disable:true
+        label text:"(1~9)" grid:10,4
+        hlayout padl:15 grid:11,0,1,2 id:targetYLabelContent
+            label text:"Target Y"
+        htextbox fw:70 grid:11,2 id:targetYTextField disable:true
+        label text:"(1~9)" grid:11,4 id:targetYRangeLabel
+        hlayout grid:1,5,12,1 align:top
+            ncanvas id:exampleCanvas fw:150 fh:150
+            
+    hline
+    hlayout padding:5,10
+        hbtnbox text:OK id:okBtn
+        hspacer
+        hbtnbox text:Cancel id:cancelBtn
+        
+    btngroup btns:measureCursorPosRadio,selectMeasurePosRadio

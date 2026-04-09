@@ -1,0 +1,9 @@
+﻿//
+// Created by Shisan on 2026/1/29.
+//
+
+#ifndef HENGREN_CD_SEM_SIGNAL_HUB_IDS_H
+#define HENGREN_CD_SEM_SIGNAL_HUB_IDS_H
+
+
+#endif //HENGREN_CD_SEM_SIGNAL_HUB_IDS_H

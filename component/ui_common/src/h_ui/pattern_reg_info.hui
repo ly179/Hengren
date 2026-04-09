@@ -1,0 +1,40 @@
+vroot
+    hlayout padding:3,7 spacing:5
+        label text:Name sp:fix
+        htextbox disable:true id:nameTextField
+    hline
+    glayout padding:3,4 align:left hspacing:15
+        hlayout grid:0,0 spacing:30
+            label text:Kind
+            htextbox fw:110 disable:true id:kindTextField
+        label text:Score grid:0,1
+        htextbox fw:60 disable:true grid:0,2 id:scoreTextField
+        hlayout grid:1,0 spacing:25
+            label text:Algorithm
+            htextbox disable:true fw:80 id:algorithmTextField
+        label text:Quality grid:1,1
+        htextbox fw:60 grid:1,2 disable:true id:qualityTextField
+        hlayout grid:2,0 spacing:7
+            label text:"Detected Patterns"
+            htextbox disable:true fw:45 id:detectPatternTextField
+        label text:"Model Size" grid:2,1
+        hlayout grid:2,2 spacing:2
+            htextbox disable:true fw:45 id:modeSizeXTextField
+            label text:X
+            htextbox disable:true fw:45 id:modeSizeYTextField
+        hlayout grid:3,0,1,3 spacing:20 align:left id:lineSpaceContent hk:true
+            label text:"Line & Space Detection"
+            htextbox disable:true fw:130 id:lineSpaceDetectTextField
+        hlayout grid:4,0,1,3 spacing:18 align:left
+            label text:Processor
+            htextbox fw:120 disable:true id:processTextField
+        label text:"Additional Information" grid:5,0,1,3
+    hlayout padding:0,4
+        hscrollarea id:additionContent
+    hline
+    hlayout padding:5,10
+        spacer sp:fix minw:40
+        hspacer
+        hbtnbox text:Print id:printBtn
+        hspacer
+        hbtnbox text:Close id:cancelBtn

@@ -1,0 +1,12 @@
+vroot
+    hlayout padding: 5 fwstretch: 1
+        label id: msgLabel __class: "BlueText PageText"
+    frame fstyle: hline, sunken fwstretch: 0
+    hlayout spacing: 5 padding: 5 fwstretch: 0 id: btnArea
+        hbtnbox id: okBtn text: OK minw: 90
+        hbtnbox id: processBtn minw: 120 hk: true visible: false
+        hspacer
+        hlayout id: cmdArea visible: false
+            hbtnbox id: retryBtn text: Retry minw: 70
+            hbtnbox id: envBtn text: Environment
+            hbtnbox id: rejectBtn text: Reject minw: 70

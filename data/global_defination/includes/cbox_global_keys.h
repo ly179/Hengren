@@ -1,0 +1,77 @@
+#ifndef CBOX_GLOBAL_KEYS_H
+#define CBOX_GLOBAL_KEYS_H
+
+//OM的放大倍率
+#define CBOX_TYPE_OM_MAG "OM_MAG"
+//SEM的放大倍率
+#define CBOX_TYPE_SEM_MAG "SEM_MAG"
+//OM下的ABC值
+#define CBOX_TYPE_OM_BC "OM_BC"
+//SEM下的亮度值
+#define CBOX_TYPE_SEM_B "SEM_BRIGHTNESS"
+//SEM下的对比度值
+#define CBOX_TYPE_SEM_C "SEM_CONTRAST"
+//全局对齐点模式匹配算法类型配置
+#define CBOX_TYPE_AP_MODEL_ALG "AP_MODEL_ALG"
+//全局对齐点模式匹配类型设置
+#define CBOX_TYPE_AP_MODEL_KIND "AP_MODEL_KIND"
+//寻址点模式匹配类型设置
+#define CBOX_TYPE_ADDRESS_MODEL_KIND "ADDRESS_MODEL_KIND"
+//测量点模式匹配类型设置
+#define CBOX_TYPE_MP_MODEL_KIND "MP_MODEL_KIND"
+//全局拍图帧率设置
+#define CBOX_TYPE_SEM_IMG_FRAME "SEM_IMG_FRAME"
+//电镜TV扫描模式
+#define CBOX_TYPE_SEM_IMG_SCAN_RATE "SEM_IMG_SCAN_RATE"
+//电镜扫描过滤器
+#define CBOX_TYPE_SEM_IMG_FILTER "SEM_IMG_FILTER"
+//电镜扫描电荷消除开关
+#define CBOX_TYPE_SEM_IMG_FLAT "SEM_IMG_FLAT"
+//电镜扫描漂移矫正
+#define CBOX_TYPE_SEM_IMG_DC "SEM_IMG_DC"
+//电镜扫描X方向像素点数
+#define CBOX_TYPE_SEM_IMG_X_PIX_COUNT "SEM_IMG_X_PIX_COUNT"
+//电镜扫描Y方向像素点数
+#define CBOX_TYPE_SEM_IMG_Y_PIX_COUNT "SEM_IMG_Y_PIX_COUNT"
+//电镜扫描X方向像素点尺寸
+#define CBOX_TYPE_SEM_IMG_X_PIX_SIZE "SEM_IMG_X_PIX_SIZE"
+//电镜扫描Y方向像素点尺寸
+#define CBOX_TYPE_SEM_IMG_Y_PIX_SIZE "SEM_IMG_Y_PIX_SIZE"
+//AP/Address自动对焦的Method
+#define CBOX_AP_AUTO_FOCUS_METHOD "AP_AUTO_FOCUS_METHOD"
+//MP自动对焦的Method
+#define CBOX_MP_AUTO_FOCUS_METHOD "MP_AUTO_FOCUS_METHOD"
+//自动消像散的mode
+#define CBOX_AUTO_STIGMA_MODE "AUTO_STIGMA_MODE"
+//MP模式匹配算法中的线条识别算法
+#define CBOX_LINE_SPACE_DETECTION "LINE_SPACE_DETECTION"
+//AMP的MPPC的Kind
+#define CBOX_AMP_MPPC_KIND "AMP_MPPC_KIND"
+//AMP的MPPC中的Data
+#define CBOX_AMP_MPPC_DATA "AMP_MPPC_DATA"
+//AMP中的飞边矫正配置
+#define CBOX_AMP_EDGE_SEARCH "AMP_EDGE_SEARCH"
+//AMP中的Shape下拉框
+#define CBOX_AMP_SHAPE "AMP_SHAPE"
+//AMP中的ACD下拉框
+#define CBOX_AMP_ACD_TYPE "AMP_ACD_TYPE"
+//AMP的测量区域识别选项
+#define CBOX_AMP_MEASURE_AREA_DIRECTION "AMP_MEASURE_AREA_DIRECTION"
+//AMP宽度类型
+#define CBOX_AMP_WIDTH_KIND "AMP_WIDTH_KIND"
+//AMP测量点类型
+#define CBOX_AMP_MEASURE_POINT_TYPE "AMP_MEASURE_POINT_TYPE"
+//AMP的粗糙度数据下拉框
+#define CBOX_AMP_ROUGHNESS_DATA "AMP_ROUGHNESS_DATA"
+//AMP的预处理选项卡
+#define CBOX_AMP_PRE_PROCESS "AMP_PRE_PROCESS"
+//模式识别中的识别/测量的图像扫描帧可选项
+#define CBOX_PR_DM_FRAME "PR_DM_FRAME"
+//模式识别中的Entire选项卡（Kind = Entire 算法为Auto时可用）
+#define CBOX_PR_AUTO_ENTIRE "PR_AUTO_ENTIRE"
+//模式识别中的centering选项卡
+#define CBOX_PR_MEASURE_CENTER "PR_MEASURE_CENTER"
+//模式识别中的算法参数设置中的Processor选项卡
+#define CBOX_PR_ALG_PROCESSOR "PR_ALG_PROCESSOR"
+
+#endif //CBOX_GLOBAL_KEYS_H

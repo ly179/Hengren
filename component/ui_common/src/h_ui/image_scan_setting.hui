@@ -1,0 +1,34 @@
+vroot
+    hlayout align:right padding:3,0 id:titleContent
+        hbtnbox text:Read id:readBtn
+    hlayout id:detailContent
+        gflayout padding:5,3 flwidth:1 fstyle:sunken,box hspacing:5
+            cbox text:"Energy Filter" grid:0,0,1,2 id:energyFilterCheckBox
+            htextbox disable:true fw:50 text:"-50" grid:0,2 id:energyFilterTextField
+            hlayout grid:0,3 spacing:5
+                label text:"BSE[%]"
+                htextbox fw:50 disable:true text:50 id:bseTextField
+            hlayout grid:1,0 spacing:5
+                label text:ABC
+                label text:"(0~100)" __class: PageText
+            label text:"B:" grid:1,1 galign:right
+            htextbox grid:1,2 id:bTextField fw:50 ph:50
+            hlayout grid:1,3 spacing:5 align:left
+                label text:"C:" sp:fix
+                htextbox id:cTextField fw:50 ph:50
+            label text:"Mag" grid:2,0
+            hlayout grid:2,2,1,2 spacing:5
+            hlayout grid:3,2,1,2 spacing:5
+                ditembox id:scanRateItemBox
+                cbox text:"Flat Mode" id:flatModeCheckBox
+            label text:"Frame" grid:4,0
+            hlayout grid:4,2,1,2 spacing:5
+                ditembox id:frameItemBox
+                label text:Filter
+                ditembox id:filterItemBox
+            label text:Pixel grid:5,0
+            label text:"X:" grid:5,1 galign:right
+            ditembox grid:5,2 id:pixelXItemBox
+            hlayout align:left spacing:5 grid:5,3
+                label text:"Y:"
+                ditembox id:pixelYItemBox

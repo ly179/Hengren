@@ -1,0 +1,44 @@
+vroot spacing:5
+    vlayout padding:6,6,0,6
+        cbox id:axisAlignCheckBox text:"Axis Alignment on Wafer" sp:fix
+        glayout align:left hspacing:5
+            label text:"Manual Assist" grid:0,0
+            spacer minw:20 grid:0,1
+            spacer minw:30 grid:0,4
+            spacer minw:5 grid:0,6
+            spacer minw:5 grid:0,8
+            hitembox id:manualAssistCBox grid:0,3
+                item text:Always val:0
+                item text:Error val:1
+                item text:No val:2
+            label text:Chip grid:1,0
+            label text:"X:" grid:1,2
+            htextbox grid:1,3 fw:85 id:chipXTextField
+            label text:"±" grid:1,5
+            htextbox grid:1,7 fw:85 id:chipXDeviationTextField
+            hbtnbox grid:1,9 text:"..." id:chipMoreBtn
+            label text:"Y:" grid:2,2
+            htextbox grid:2,3 fw:85 id:chipYTextField
+            label text:"±" grid:2,5
+            htextbox grid:2,7 fw:85 id:chipYDeviationTextField
+    
+    hlayout id:detailContent spacing:5
+    hlayout padl:6 align:left
+        cbox text:Confirmation id:"confirmCheckBox" sp:fix
+    hline
+    vlayout spacing:5 padl:6
+        cbox text:"Update SEM Condition" id:updateSemConditionCheckBox sp:fix
+        hlayout padl:25 spacing:5 padr:10
+            label text:"Additional adjustment of SEM Condition Memory No."
+            htextbox fw:70 id:memNo1 disable:true
+            htextbox fw:70 id:memNo2 disable:true
+            htextbox fw:70 id:memNo3 disable:true
+    hline
+    hlayout align:right padding:0,10 spacing:15
+        hbtnbox text:Test id:testBtn
+        hbtnbox text:Stop id:stopBtn
+    hline
+    hlayout padding:0,10,5,10
+        hbtnbox text:OK id:okBtn
+        hspacer
+        hbtnbox text:Cancel id:cancelBtn

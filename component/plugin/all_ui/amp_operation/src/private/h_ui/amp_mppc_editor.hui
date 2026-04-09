@@ -1,0 +1,70 @@
+vroot align:top,left
+    glayout hspacing:30 align:left
+        label text:Object grid:0,0
+        hitembox grid:0,1 galign:left id:objectCBox
+            item text:Line val:0
+        label text:Kind grid:1,0
+        ditembox grid:1,1 galign:left id:kindCBox
+        label text:Data grid:2,0
+        ditembox grid: 2,1 galign:left fw:170 id:dataCBox
+        glayout grid:3,0,1,2 align:left
+            vlayout padt:5 grid:0,0
+                label text:"Measurement Point"
+                label text:"(8,16,32)" style:"QLabel{font-size: 8pt;}"
+            htextbox fw:50 ph:32 align:left grid:0,1 galign:top id:measurePointTextField
+            vlayout padt:5 grid:1,0
+                label text:"Sum Lines / Point"
+                label text:"(1~200)" style:"QLabel{font-size: 8pt;}"
+            htextbox fw:50 ph:100 align:left grid:1,1 galign:top id:sumLineTextField
+        label text:"Cursor Type" grid:4,0
+        hitembox grid:4,1 galign:left id:cursorCBox
+            item text:"Two Box" val:0
+    hline
+    glayout align:left padt:5 padb:5 hspacing:20
+        vlayout padt:5 grid:0,0
+            label text:"Design Value"
+            label text:"(1.0~200000.0)" style:"QLabel{font-size: 8pt;}"
+        hlayout align:left grid:0,1,1,3 galign:top spacing:5
+            htextbox fw:80 ph:"500.0" id:designValueTextField
+            label text:nm
+        vlayout padt:5 grid:1,0
+            label text:"Search Area"
+            label text:"(10~150)" style:"QLabel{font-size: 8pt;}"
+        htextbox fw:50 ph:80 align:left grid:1,1 galign:top id:searchAreaTextField
+        vlayout padt:5 grid:1,2
+            label text:"Smoothing"
+            label text:"(1~29(odd))" style:"QLabel{font-size: 8pt;}"
+        htextbox fw:50 ph:7 align:left grid:1,3 galign:top id:smoothingTextField
+        vlayout padt:5 grid:2,0
+            label text:"Inspect Area"
+            label text:"(1~400)" style:"QLabel{font-size: 8pt;}"
+        htextbox fw:50 ph:300 align:left grid:2,1 galign:top id:inspectAreaTextField
+    hline
+    glayout padt:10 padb:10  align:left padl:20
+        spacer minw:40 grid:1,0
+        spacer minw:20 grid:0,2
+        spacer minw:50 grid:0,4
+        spacer minh:5 grid:4,0
+        spacer minh:10 grid:1,0
+        label text:Threshold grid:0,0,1,2
+        label text:"Upper" grid:0,3
+        label text:"Lower" grid:0,5
+        vlayout padt:5 grid:2,1 galign:left
+            label text:"Inner"
+            label text:"(0~100%)" style:"QLabel{font-size: 8pt;}"
+        htextbox fw:50 ph:90 align:left grid:2,3 galign:top id:upperInnerTextField
+        htextbox fw:50 ph:30 align:left grid:2,5 galign:top id:lowerInnerTextField
+        vlayout padt:5 grid:3,1 galign:left
+            label text:"Outer"
+            label text:"(0~100%)" style:"QLabel{font-size: 8pt;}"
+        htextbox fw:50 ph:90 align:left grid:3,3 galign:top id:upperOuterTextField
+        htextbox fw:50 ph:30 align:left grid:3,5 galign:top id:lowerOuterTextField
+        label text:"Base Point" grid:4,1
+        htextbox fw:50 ph:10 align:left grid:4,3 id:basePointTextField
+        label text:"Brightness balance check" grid:6,1,1,4
+        htextbox fw:50 ph:70 grid:6,5 id:bbcTextField
+    hline
+    hlayout align:left spacing:10 padt:5 padb:5
+        label text:"Measurement Position"
+        ditembox id:measurePositionCBox
+        

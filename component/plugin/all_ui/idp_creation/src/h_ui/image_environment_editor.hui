@@ -1,0 +1,12 @@
+vroot
+    vlayout padding:10 spacing:5
+        cbox id:useSysParamCBox text:"Use System Parameters" sp:fix
+        tabpane id:tabPane
+            unknow id:"alignContent" title:"Alignment" padding:10
+            unknow id:"addressContent" title:"Addressing" padding:10
+            unknow id:"measureContent" title:"Measurement" padding:10
+    hline
+    hlayout padding:5,10
+        hbtnbox id:okBtn text:OK
+        hspacer
+        hbtnbox id:cancelBtn text:Cancel

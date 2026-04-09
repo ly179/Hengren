@@ -1,0 +1,14 @@
+vroot
+    vlayout padding:10,15,5,15 spacing:5
+        hlayout spacing:5
+            label text:Class
+            htextbox id:classTextField disable:true sp:exp,fix
+        label id:typeLabel
+        hlist id:listContent
+        spacer minh:15
+        htextbox id:selectTextField disable:true
+    hline
+    hlayout padding:5,10
+        hbtnbox text:OK id:okBtn
+        hspacer
+        hbtnbox text:Cancel id:cancelBtn

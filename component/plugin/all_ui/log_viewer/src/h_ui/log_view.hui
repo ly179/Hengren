@@ -1,0 +1,6 @@
+vroot align:top
+    menubar
+        menu text:File
+            act text:Exit id:exitAct
+    hlayout padding:5
+        tabpane id:logContent
